@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0880BD37676D24CCC899A254 /* libPods-BikeSmart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303F29A4AA2420C69CAD3916 /* libPods-BikeSmart.a */; };
+		BF5AE28C1F089E6200ED49E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5AE28B1F089E6200ED49E6 /* main.m */; };
+		BF5AE28F1F089E6200ED49E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5AE28E1F089E6200ED49E6 /* AppDelegate.m */; };
+		BF5AE2971F089E6200ED49E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE2961F089E6200ED49E6 /* Assets.xcassets */; };
+		BF5AE29A1F089E6200ED49E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE2981F089E6200ED49E6 /* LaunchScreen.storyboard */; };
+		BF5AE2A41F089EB400ED49E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5AE2A31F089EB400ED49E6 /* MapKit.framework */; };
+		BFF524651F09DF4500A0E1C6 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524641F09DF4500A0E1C6 /* MainVC.m */; };
+		BFF5246B1F09ED1D00A0E1C6 /* UIView+JLView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5246A1F09ED1D00A0E1C6 /* UIView+JLView.m */; };
+		BFF5246E1F09F3D600A0E1C6 /* NSString+JLString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5246D1F09F3D600A0E1C6 /* NSString+JLString.m */; };
+		BFF524711F09F3F500A0E1C6 /* UILabel+JLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524701F09F3F500A0E1C6 /* UILabel+JLLabel.m */; };
+		BFF524741F0A3DF200A0E1C6 /* SideMenuV.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524731F0A3DF200A0E1C6 /* SideMenuV.m */; };
+		BFF5247A1F0A4D7E00A0E1C6 /* SpinnerBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524791F0A4D7E00A0E1C6 /* SpinnerBtn.m */; };
+		BFF5247F1F0B194400A0E1C6 /* MapV.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5247E1F0B194400A0E1C6 /* MapV.m */; };
+		BFF524821F0B21DB00A0E1C6 /* UIColor+JLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524811F0B21DB00A0E1C6 /* UIColor+JLColor.m */; };
+		BFF524861F0BF1B700A0E1C6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF524851F0BF1B700A0E1C6 /* CoreLocation.framework */; };
+		BFF524891F0CEBC500A0E1C6 /* MapInfoBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524881F0CEBC500A0E1C6 /* MapInfoBtn.m */; };
+		BFF5248C1F10679D00A0E1C6 /* UIImage+JLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5248B1F10679D00A0E1C6 /* UIImage+JLImage.m */; };
+		BFF524921F13875100A0E1C6 /* CityBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524911F13875100A0E1C6 /* CityBikeMarker.m */; };
+		BFF524951F13876000A0E1C6 /* YouBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524941F13876000A0E1C6 /* YouBikeMarker.m */; };
+		BFF524991F13878700A0E1C6 /* PBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524981F13878700A0E1C6 /* PBikeMarker.m */; };
+		BFF5249C1F13879100A0E1C6 /* KBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5249B1F13879100A0E1C6 /* KBikeMarker.m */; };
+		BFF5249F1F1387B400A0E1C6 /* EBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5249E1F1387B400A0E1C6 /* EBikeMarker.m */; };
+		BFF524A21F13CE6900A0E1C6 /* MarkerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524A11F13CE6900A0E1C6 /* MarkerVM.m */; };
+		BFF524A51F14497C00A0E1C6 /* TBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524A41F14497C00A0E1C6 /* TBikeMarker.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		303F29A4AA2420C69CAD3916 /* libPods-BikeSmart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BikeSmart.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E056A18B090AA75CEF8681B /* Pods-BikeSmart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSmart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart.debug.xcconfig"; sourceTree = "<group>"; };
+		BF5AE2871F089E6200ED49E6 /* BikeSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF5AE28B1F089E6200ED49E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF5AE28D1F089E6200ED49E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF5AE28E1F089E6200ED49E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF5AE2961F089E6200ED49E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF5AE2991F089E6200ED49E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF5AE29B1F089E6200ED49E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5AE2A11F089E8800ED49E6 /* BikeSmart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BikeSmart.entitlements; sourceTree = "<group>"; };
+		BF5AE2A31F089EB400ED49E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BFF524631F09DF4500A0E1C6 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
+		BFF524641F09DF4500A0E1C6 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		BFF524691F09ED1D00A0E1C6 /* UIView+JLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JLView.h"; sourceTree = "<group>"; };
+		BFF5246A1F09ED1D00A0E1C6 /* UIView+JLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JLView.m"; sourceTree = "<group>"; };
+		BFF5246C1F09F3D600A0E1C6 /* NSString+JLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JLString.h"; sourceTree = "<group>"; };
+		BFF5246D1F09F3D600A0E1C6 /* NSString+JLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JLString.m"; sourceTree = "<group>"; };
+		BFF5246F1F09F3F500A0E1C6 /* UILabel+JLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JLLabel.h"; sourceTree = "<group>"; };
+		BFF524701F09F3F500A0E1C6 /* UILabel+JLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JLLabel.m"; sourceTree = "<group>"; };
+		BFF524721F0A3DF200A0E1C6 /* SideMenuV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuV.h; sourceTree = "<group>"; };
+		BFF524731F0A3DF200A0E1C6 /* SideMenuV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuV.m; sourceTree = "<group>"; };
+		BFF524781F0A4D7E00A0E1C6 /* SpinnerBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinnerBtn.h; sourceTree = "<group>"; };
+		BFF524791F0A4D7E00A0E1C6 /* SpinnerBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinnerBtn.m; sourceTree = "<group>"; };
+		BFF5247D1F0B194400A0E1C6 /* MapV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapV.h; sourceTree = "<group>"; };
+		BFF5247E1F0B194400A0E1C6 /* MapV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapV.m; sourceTree = "<group>"; };
+		BFF524801F0B21DB00A0E1C6 /* UIColor+JLColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JLColor.h"; sourceTree = "<group>"; };
+		BFF524811F0B21DB00A0E1C6 /* UIColor+JLColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JLColor.m"; sourceTree = "<group>"; };
+		BFF524841F0B30DE00A0E1C6 /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
+		BFF524851F0BF1B700A0E1C6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BFF524871F0CEBC500A0E1C6 /* MapInfoBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInfoBtn.h; sourceTree = "<group>"; };
+		BFF524881F0CEBC500A0E1C6 /* MapInfoBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInfoBtn.m; sourceTree = "<group>"; };
+		BFF5248A1F10679D00A0E1C6 /* UIImage+JLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JLImage.h"; sourceTree = "<group>"; };
+		BFF5248B1F10679D00A0E1C6 /* UIImage+JLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JLImage.m"; sourceTree = "<group>"; };
+		BFF524901F13875100A0E1C6 /* CityBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityBikeMarker.h; sourceTree = "<group>"; };
+		BFF524911F13875100A0E1C6 /* CityBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityBikeMarker.m; sourceTree = "<group>"; };
+		BFF524931F13876000A0E1C6 /* YouBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouBikeMarker.h; sourceTree = "<group>"; };
+		BFF524941F13876000A0E1C6 /* YouBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouBikeMarker.m; sourceTree = "<group>"; };
+		BFF524971F13878700A0E1C6 /* PBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBikeMarker.h; sourceTree = "<group>"; };
+		BFF524981F13878700A0E1C6 /* PBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBikeMarker.m; sourceTree = "<group>"; };
+		BFF5249A1F13879100A0E1C6 /* KBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBikeMarker.h; sourceTree = "<group>"; };
+		BFF5249B1F13879100A0E1C6 /* KBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBikeMarker.m; sourceTree = "<group>"; };
+		BFF5249D1F1387B400A0E1C6 /* EBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBikeMarker.h; sourceTree = "<group>"; };
+		BFF5249E1F1387B400A0E1C6 /* EBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBikeMarker.m; sourceTree = "<group>"; };
+		BFF524A01F13CE6900A0E1C6 /* MarkerVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerVM.h; sourceTree = "<group>"; };
+		BFF524A11F13CE6900A0E1C6 /* MarkerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerVM.m; sourceTree = "<group>"; };
+		BFF524A31F14497C00A0E1C6 /* TBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBikeMarker.h; sourceTree = "<group>"; };
+		BFF524A41F14497C00A0E1C6 /* TBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBikeMarker.m; sourceTree = "<group>"; };
+		E00F17468595B99CE5780BEA /* Pods-BikeSmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSmart.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF5AE2841F089E6200ED49E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF524861F0BF1B700A0E1C6 /* CoreLocation.framework in Frameworks */,
+				BF5AE2A41F089EB400ED49E6 /* MapKit.framework in Frameworks */,
+				0880BD37676D24CCC899A254 /* libPods-BikeSmart.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D973A0943C28A32401B2249 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E056A18B090AA75CEF8681B /* Pods-BikeSmart.debug.xcconfig */,
+				E00F17468595B99CE5780BEA /* Pods-BikeSmart.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF5AE27E1F089E6200ED49E6 = {
+			isa = PBXGroup;
+			children = (
+				BF5AE2891F089E6200ED49E6 /* BikeSmart */,
+				BF5AE2881F089E6200ED49E6 /* Products */,
+				BF5AE2A21F089EB400ED49E6 /* Frameworks */,
+				3D973A0943C28A32401B2249 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		BF5AE2881F089E6200ED49E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF5AE2871F089E6200ED49E6 /* BikeSmart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF5AE2891F089E6200ED49E6 /* BikeSmart */ = {
+			isa = PBXGroup;
+			children = (
+				BFF524831F0B30C700A0E1C6 /* Definition */,
+				BFF5247B1F0A4D8700A0E1C6 /* Customized */,
+				BF5AE2A91F08D63800ED49E6 /* Singleton */,
+				BF5AE2A81F08D62200ED49E6 /* ViewModel */,
+				BF5AE2A71F08D61C00ED49E6 /* Model */,
+				BF5AE2A61F08D61700ED49E6 /* View */,
+				BF5AE2A51F08D61000ED49E6 /* Extensions */,
+				BF5AE2A11F089E8800ED49E6 /* BikeSmart.entitlements */,
+				BF5AE28D1F089E6200ED49E6 /* AppDelegate.h */,
+				BF5AE28E1F089E6200ED49E6 /* AppDelegate.m */,
+				BF5AE2961F089E6200ED49E6 /* Assets.xcassets */,
+				BF5AE2981F089E6200ED49E6 /* LaunchScreen.storyboard */,
+				BF5AE29B1F089E6200ED49E6 /* Info.plist */,
+				BF5AE28A1F089E6200ED49E6 /* Supporting Files */,
+			);
+			path = BikeSmart;
+			sourceTree = "<group>";
+		};
+		BF5AE28A1F089E6200ED49E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF5AE28B1F089E6200ED49E6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF5AE2A21F089EB400ED49E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFF524851F0BF1B700A0E1C6 /* CoreLocation.framework */,
+				BF5AE2A31F089EB400ED49E6 /* MapKit.framework */,
+				303F29A4AA2420C69CAD3916 /* libPods-BikeSmart.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF5AE2A51F08D61000ED49E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFF524691F09ED1D00A0E1C6 /* UIView+JLView.h */,
+				BFF5246A1F09ED1D00A0E1C6 /* UIView+JLView.m */,
+				BFF5246C1F09F3D600A0E1C6 /* NSString+JLString.h */,
+				BFF5246D1F09F3D600A0E1C6 /* NSString+JLString.m */,
+				BFF5246F1F09F3F500A0E1C6 /* UILabel+JLLabel.h */,
+				BFF524701F09F3F500A0E1C6 /* UILabel+JLLabel.m */,
+				BFF524801F0B21DB00A0E1C6 /* UIColor+JLColor.h */,
+				BFF524811F0B21DB00A0E1C6 /* UIColor+JLColor.m */,
+				BFF5248A1F10679D00A0E1C6 /* UIImage+JLImage.h */,
+				BFF5248B1F10679D00A0E1C6 /* UIImage+JLImage.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		BF5AE2A61F08D61700ED49E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFF524631F09DF4500A0E1C6 /* MainVC.h */,
+				BFF524641F09DF4500A0E1C6 /* MainVC.m */,
+				BFF524721F0A3DF200A0E1C6 /* SideMenuV.h */,
+				BFF524731F0A3DF200A0E1C6 /* SideMenuV.m */,
+				BFF5247D1F0B194400A0E1C6 /* MapV.h */,
+				BFF5247E1F0B194400A0E1C6 /* MapV.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BF5AE2A71F08D61C00ED49E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFF524961F13876400A0E1C6 /* GMSMarkers */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BF5AE2A81F08D62200ED49E6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BFF524A01F13CE6900A0E1C6 /* MarkerVM.h */,
+				BFF524A11F13CE6900A0E1C6 /* MarkerVM.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		BF5AE2A91F08D63800ED49E6 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
+		BFF5247B1F0A4D8700A0E1C6 /* Customized */ = {
+			isa = PBXGroup;
+			children = (
+				BFF524781F0A4D7E00A0E1C6 /* SpinnerBtn.h */,
+				BFF524791F0A4D7E00A0E1C6 /* SpinnerBtn.m */,
+				BFF524871F0CEBC500A0E1C6 /* MapInfoBtn.h */,
+				BFF524881F0CEBC500A0E1C6 /* MapInfoBtn.m */,
+			);
+			name = Customized;
+			sourceTree = "<group>";
+		};
+		BFF524831F0B30C700A0E1C6 /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				BFF524841F0B30DE00A0E1C6 /* Definitions.h */,
+			);
+			name = Definition;
+			sourceTree = "<group>";
+		};
+		BFF524961F13876400A0E1C6 /* GMSMarkers */ = {
+			isa = PBXGroup;
+			children = (
+				BFF524901F13875100A0E1C6 /* CityBikeMarker.h */,
+				BFF524911F13875100A0E1C6 /* CityBikeMarker.m */,
+				BFF524931F13876000A0E1C6 /* YouBikeMarker.h */,
+				BFF524941F13876000A0E1C6 /* YouBikeMarker.m */,
+				BFF524971F13878700A0E1C6 /* PBikeMarker.h */,
+				BFF524981F13878700A0E1C6 /* PBikeMarker.m */,
+				BFF5249A1F13879100A0E1C6 /* KBikeMarker.h */,
+				BFF5249B1F13879100A0E1C6 /* KBikeMarker.m */,
+				BFF5249D1F1387B400A0E1C6 /* EBikeMarker.h */,
+				BFF5249E1F1387B400A0E1C6 /* EBikeMarker.m */,
+				BFF524A31F14497C00A0E1C6 /* TBikeMarker.h */,
+				BFF524A41F14497C00A0E1C6 /* TBikeMarker.m */,
+			);
+			name = GMSMarkers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF5AE2861F089E6200ED49E6 /* BikeSmart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF5AE29E1F089E6200ED49E6 /* Build configuration list for PBXNativeTarget "BikeSmart" */;
+			buildPhases = (
+				89BAFE47DD504ADAB7E1E9E3 /* [CP] Check Pods Manifest.lock */,
+				BF5AE2831F089E6200ED49E6 /* Sources */,
+				BF5AE2841F089E6200ED49E6 /* Frameworks */,
+				BF5AE2851F089E6200ED49E6 /* Resources */,
+				51EFF6D8ED31D1461D4D9753 /* [CP] Embed Pods Frameworks */,
+				1E81CB4DBF9E5D7F2B6CC253 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BikeSmart;
+			productName = BikeSmart;
+			productReference = BF5AE2871F089E6200ED49E6 /* BikeSmart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF5AE27F1F089E6200ED49E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Jimmy;
+				TargetAttributes = {
+					BF5AE2861F089E6200ED49E6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 8SLV3B6FU8;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = BF5AE2821F089E6200ED49E6 /* Build configuration list for PBXProject "BikeSmart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF5AE27E1F089E6200ED49E6;
+			productRefGroup = BF5AE2881F089E6200ED49E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF5AE2861F089E6200ED49E6 /* BikeSmart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF5AE2851F089E6200ED49E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF5AE29A1F089E6200ED49E6 /* LaunchScreen.storyboard in Resources */,
+				BF5AE2971F089E6200ED49E6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E81CB4DBF9E5D7F2B6CC253 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51EFF6D8ED31D1461D4D9753 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89BAFE47DD504ADAB7E1E9E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF5AE2831F089E6200ED49E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF524951F13876000A0E1C6 /* YouBikeMarker.m in Sources */,
+				BFF524651F09DF4500A0E1C6 /* MainVC.m in Sources */,
+				BFF524921F13875100A0E1C6 /* CityBikeMarker.m in Sources */,
+				BFF5246E1F09F3D600A0E1C6 /* NSString+JLString.m in Sources */,
+				BFF524A21F13CE6900A0E1C6 /* MarkerVM.m in Sources */,
+				BFF5249C1F13879100A0E1C6 /* KBikeMarker.m in Sources */,
+				BF5AE28F1F089E6200ED49E6 /* AppDelegate.m in Sources */,
+				BFF524991F13878700A0E1C6 /* PBikeMarker.m in Sources */,
+				BFF524741F0A3DF200A0E1C6 /* SideMenuV.m in Sources */,
+				BFF5247A1F0A4D7E00A0E1C6 /* SpinnerBtn.m in Sources */,
+				BFF5248C1F10679D00A0E1C6 /* UIImage+JLImage.m in Sources */,
+				BFF5247F1F0B194400A0E1C6 /* MapV.m in Sources */,
+				BF5AE28C1F089E6200ED49E6 /* main.m in Sources */,
+				BFF524A51F14497C00A0E1C6 /* TBikeMarker.m in Sources */,
+				BFF5246B1F09ED1D00A0E1C6 /* UIView+JLView.m in Sources */,
+				BFF524711F09F3F500A0E1C6 /* UILabel+JLLabel.m in Sources */,
+				BFF5249F1F1387B400A0E1C6 /* EBikeMarker.m in Sources */,
+				BFF524891F0CEBC500A0E1C6 /* MapInfoBtn.m in Sources */,
+				BFF524821F0B21DB00A0E1C6 /* UIColor+JLColor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF5AE2981F089E6200ED49E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5AE2991F089E6200ED49E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF5AE29C1F089E6200ED49E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF5AE29D1F089E6200ED49E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF5AE29F1F089E6200ED49E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E056A18B090AA75CEF8681B /* Pods-BikeSmart.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BikeSmart/BikeSmart.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8SLV3B6FU8;
+				INFOPLIST_FILE = BikeSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MantaRay.BikeSmart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "27f39fab-50f4-45c3-a9c0-6ee6a7726199";
+				PROVISIONING_PROFILE_SPECIFIER = "MantaRay BikeSmart JL";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BF5AE2A01F089E6200ED49E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E00F17468595B99CE5780BEA /* Pods-BikeSmart.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BikeSmart/BikeSmart.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8SLV3B6FU8;
+				INFOPLIST_FILE = BikeSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MantaRay.BikeSmart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "27f39fab-50f4-45c3-a9c0-6ee6a7726199";
+				PROVISIONING_PROFILE_SPECIFIER = "MantaRay BikeSmart JL";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF5AE2821F089E6200ED49E6 /* Build configuration list for PBXProject "BikeSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF5AE29C1F089E6200ED49E6 /* Debug */,
+				BF5AE29D1F089E6200ED49E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF5AE29E1F089E6200ED49E6 /* Build configuration list for PBXNativeTarget "BikeSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF5AE29F1F089E6200ED49E6 /* Debug */,
+				BF5AE2A01F089E6200ED49E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF5AE27F1F089E6200ED49E6 /* Project object */;
+}

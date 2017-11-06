@@ -13,6 +13,7 @@
 		BF5AE2971F089E6200ED49E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE2961F089E6200ED49E6 /* Assets.xcassets */; };
 		BF5AE29A1F089E6200ED49E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE2981F089E6200ED49E6 /* LaunchScreen.storyboard */; };
 		BF5AE2A41F089EB400ED49E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5AE2A31F089EB400ED49E6 /* MapKit.framework */; };
+		BF902BA01F3B681A00639115 /* BikeMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = BF902B9F1F3B681A00639115 /* BikeMarkers.m */; };
 		BFF524651F09DF4500A0E1C6 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524641F09DF4500A0E1C6 /* MainVC.m */; };
 		BFF5246B1F09ED1D00A0E1C6 /* UIView+JLView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5246A1F09ED1D00A0E1C6 /* UIView+JLView.m */; };
 		BFF5246E1F09F3D600A0E1C6 /* NSString+JLString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5246D1F09F3D600A0E1C6 /* NSString+JLString.m */; };
@@ -24,13 +25,7 @@
 		BFF524861F0BF1B700A0E1C6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF524851F0BF1B700A0E1C6 /* CoreLocation.framework */; };
 		BFF524891F0CEBC500A0E1C6 /* MapInfoBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524881F0CEBC500A0E1C6 /* MapInfoBtn.m */; };
 		BFF5248C1F10679D00A0E1C6 /* UIImage+JLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5248B1F10679D00A0E1C6 /* UIImage+JLImage.m */; };
-		BFF524921F13875100A0E1C6 /* CityBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524911F13875100A0E1C6 /* CityBikeMarker.m */; };
-		BFF524951F13876000A0E1C6 /* YouBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524941F13876000A0E1C6 /* YouBikeMarker.m */; };
-		BFF524991F13878700A0E1C6 /* PBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524981F13878700A0E1C6 /* PBikeMarker.m */; };
-		BFF5249C1F13879100A0E1C6 /* KBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5249B1F13879100A0E1C6 /* KBikeMarker.m */; };
-		BFF5249F1F1387B400A0E1C6 /* EBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5249E1F1387B400A0E1C6 /* EBikeMarker.m */; };
 		BFF524A21F13CE6900A0E1C6 /* MarkerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524A11F13CE6900A0E1C6 /* MarkerVM.m */; };
-		BFF524A51F14497C00A0E1C6 /* TBikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524A41F14497C00A0E1C6 /* TBikeMarker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +40,8 @@
 		BF5AE29B1F089E6200ED49E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5AE2A11F089E8800ED49E6 /* BikeSmart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BikeSmart.entitlements; sourceTree = "<group>"; };
 		BF5AE2A31F089EB400ED49E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BF902B9E1F3B681A00639115 /* BikeMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeMarkers.h; sourceTree = "<group>"; };
+		BF902B9F1F3B681A00639115 /* BikeMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeMarkers.m; sourceTree = "<group>"; };
 		BFF524631F09DF4500A0E1C6 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		BFF524641F09DF4500A0E1C6 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 		BFF524691F09ED1D00A0E1C6 /* UIView+JLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JLView.h"; sourceTree = "<group>"; };
@@ -67,20 +64,8 @@
 		BFF524881F0CEBC500A0E1C6 /* MapInfoBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInfoBtn.m; sourceTree = "<group>"; };
 		BFF5248A1F10679D00A0E1C6 /* UIImage+JLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JLImage.h"; sourceTree = "<group>"; };
 		BFF5248B1F10679D00A0E1C6 /* UIImage+JLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JLImage.m"; sourceTree = "<group>"; };
-		BFF524901F13875100A0E1C6 /* CityBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityBikeMarker.h; sourceTree = "<group>"; };
-		BFF524911F13875100A0E1C6 /* CityBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityBikeMarker.m; sourceTree = "<group>"; };
-		BFF524931F13876000A0E1C6 /* YouBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouBikeMarker.h; sourceTree = "<group>"; };
-		BFF524941F13876000A0E1C6 /* YouBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouBikeMarker.m; sourceTree = "<group>"; };
-		BFF524971F13878700A0E1C6 /* PBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBikeMarker.h; sourceTree = "<group>"; };
-		BFF524981F13878700A0E1C6 /* PBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBikeMarker.m; sourceTree = "<group>"; };
-		BFF5249A1F13879100A0E1C6 /* KBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBikeMarker.h; sourceTree = "<group>"; };
-		BFF5249B1F13879100A0E1C6 /* KBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBikeMarker.m; sourceTree = "<group>"; };
-		BFF5249D1F1387B400A0E1C6 /* EBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBikeMarker.h; sourceTree = "<group>"; };
-		BFF5249E1F1387B400A0E1C6 /* EBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBikeMarker.m; sourceTree = "<group>"; };
 		BFF524A01F13CE6900A0E1C6 /* MarkerVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerVM.h; sourceTree = "<group>"; };
 		BFF524A11F13CE6900A0E1C6 /* MarkerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerVM.m; sourceTree = "<group>"; };
-		BFF524A31F14497C00A0E1C6 /* TBikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBikeMarker.h; sourceTree = "<group>"; };
-		BFF524A41F14497C00A0E1C6 /* TBikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBikeMarker.m; sourceTree = "<group>"; };
 		E00F17468595B99CE5780BEA /* Pods-BikeSmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSmart.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,18 +225,8 @@
 		BFF524961F13876400A0E1C6 /* GMSMarkers */ = {
 			isa = PBXGroup;
 			children = (
-				BFF524901F13875100A0E1C6 /* CityBikeMarker.h */,
-				BFF524911F13875100A0E1C6 /* CityBikeMarker.m */,
-				BFF524931F13876000A0E1C6 /* YouBikeMarker.h */,
-				BFF524941F13876000A0E1C6 /* YouBikeMarker.m */,
-				BFF524971F13878700A0E1C6 /* PBikeMarker.h */,
-				BFF524981F13878700A0E1C6 /* PBikeMarker.m */,
-				BFF5249A1F13879100A0E1C6 /* KBikeMarker.h */,
-				BFF5249B1F13879100A0E1C6 /* KBikeMarker.m */,
-				BFF5249D1F1387B400A0E1C6 /* EBikeMarker.h */,
-				BFF5249E1F1387B400A0E1C6 /* EBikeMarker.m */,
-				BFF524A31F14497C00A0E1C6 /* TBikeMarker.h */,
-				BFF524A41F14497C00A0E1C6 /* TBikeMarker.m */,
+				BF902B9E1F3B681A00639115 /* BikeMarkers.h */,
+				BF902B9F1F3B681A00639115 /* BikeMarkers.m */,
 			);
 			name = GMSMarkers;
 			sourceTree = "<group>";
@@ -389,23 +364,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFF524951F13876000A0E1C6 /* YouBikeMarker.m in Sources */,
+				BF902BA01F3B681A00639115 /* BikeMarkers.m in Sources */,
 				BFF524651F09DF4500A0E1C6 /* MainVC.m in Sources */,
-				BFF524921F13875100A0E1C6 /* CityBikeMarker.m in Sources */,
 				BFF5246E1F09F3D600A0E1C6 /* NSString+JLString.m in Sources */,
 				BFF524A21F13CE6900A0E1C6 /* MarkerVM.m in Sources */,
-				BFF5249C1F13879100A0E1C6 /* KBikeMarker.m in Sources */,
 				BF5AE28F1F089E6200ED49E6 /* AppDelegate.m in Sources */,
-				BFF524991F13878700A0E1C6 /* PBikeMarker.m in Sources */,
 				BFF524741F0A3DF200A0E1C6 /* SideMenuV.m in Sources */,
 				BFF5247A1F0A4D7E00A0E1C6 /* SpinnerBtn.m in Sources */,
 				BFF5248C1F10679D00A0E1C6 /* UIImage+JLImage.m in Sources */,
 				BFF5247F1F0B194400A0E1C6 /* MapV.m in Sources */,
 				BF5AE28C1F089E6200ED49E6 /* main.m in Sources */,
-				BFF524A51F14497C00A0E1C6 /* TBikeMarker.m in Sources */,
 				BFF5246B1F09ED1D00A0E1C6 /* UIView+JLView.m in Sources */,
 				BFF524711F09F3F500A0E1C6 /* UILabel+JLLabel.m in Sources */,
-				BFF5249F1F1387B400A0E1C6 /* EBikeMarker.m in Sources */,
 				BFF524891F0CEBC500A0E1C6 /* MapInfoBtn.m in Sources */,
 				BFF524821F0B21DB00A0E1C6 /* UIColor+JLColor.m in Sources */,
 			);

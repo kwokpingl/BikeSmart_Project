@@ -41,96 +41,841 @@ class WebSite_Decoder:
     def fetchWebData(self):
         # FETCH DATA URL
         tbMgr = self.tbMgr
-        for key, url in self.urls.iteritems():
+        for key, urlArray in self.urls.iteritems():
             
-            fetcher   = Fetcher(url, 2)
-            page      = fetcher.getWebInfo()
-            soup = BS(page, "lxml")
-            
-            if key == "IBike_HCC":
+            if (key == "IBike_HCC" 
+                or key == "UBike_HC" 
+                or key == "UBike_CH"):
+                
+                fetcher     = Fetcher(urlArray[0], 2)
+                page        = fetcher.getWebInfo()
+                soup        = BS(page, "lxml")
+                
                 records = self.extractUBikeInfo(soup)
                 records = json.loads(records)
-                self.recordUBikeInfo(records, key)
-    
+                self.recordUBikeInfo(records, key, False)
+                
+                fetcher     = Fetcher(urlArray[1], 2)
+                page        = fetcher.getWebInfo()
+                soup        = BS(page, 'lxml')
+                
+                records = self.extractUBikeInfo(soup)
+                records = json.loads(records)
+                self.recordUBikeInfo(records, key, True)
+            
+            if key == 'EBike_CY':
+                self.setupAdsnens(key)
+                fetcher     = Fetcher(urlArray[0], 2)
+                page        = fetcher.getWebInfo()
+                soup        = BS(page, 'html.parser')
+                records     = self.extractEBikeInfo(soup)
+                self.recordEBikeInfo(records, key)
+            
+            if key == 'KBike_KM':
+                self.setupAdsnens(key)
+                fetcher     = Fetcher(urlArray[0], 2)
+                page        = fetcher.getWebInfo()
+                soup        = BS(page, 'html.parser')
+                records     = self.extractKBikeInfo(soup)
+                self.recordKBikeInfo(records, key)
+                
+                
+                
+    # Setup the Dictionaries for Translations
     def setupAdsnens(self, key):
         self.adsnens = {}
-        if key == "IBike_HCC":
-            self.adsnens = {
-                "逢甲大學":["Fuxing Road & Fengjia Road, Xitun District, Taichung City, 407", "Feng Chia University", "Xitun District"],
-                "秋紅谷":["Chaofu Road & Chaoma Road, Xitun District, Taichung City, 407", "Maple Garden", "Xitun District"],
-                "市政府(文心樓)":["Section 2, Wenxin Road, Xitun District, Taichung City, 407", "Taichung City Government", "Xitun District"],
-                "漢翔福星北路口":["Hanxiang Road & Fuxing North Road, Xitun District, Taichung City, 407", "Hanxiang Rd & Fuxing N Rd", "Xitun District"],
-                "福星公園":["Lane 301, Section 2, Henan Road & Lane 50, Baoqing St, Xitun District, Taichung City, 407", "Fuxing Park", "Xitun District"],
-                "櫻花棒球場":["Yinghua Road & 洛陽路 Xitun District, Taichung City, 407", "Cherry Blossoms Baseball Field", "Xitun District"],
-                "重慶公園":["Section 2, Xitun Road & Tianshui West 6th St, Xitun District, Taichung City, 407", "Chongqing Park", "Xitun District"],
-                "頂何厝":["Section 2, Taiwan Boulevard, Xitun District, Taichung City, 407", "Ding He Cuo", "Xitun District"],
-                "公益大英街口":["Section 2, Gongyi Road & Daying Street, Nantun District, Taichung City, 408", "Gongyi Rd & Daying St", "Nantun District"],
-                "新光/遠百":["Section 3, Taiwan Boulevard & Huilai Road, Xitun District, Taichung City, 407", "Xin Guang / Yuan Bai", "Xitun District"],
-                "青海逢甲路口":["Section 2, Qinghai Road & Fengjia Road, Xitun District, Taichung City, 407", "Qinghai Rd & Fengjia Rd", "Xitun District"],
-                "忠明國小":["No. 531, Section 2, Taiwan Boulevard, West District, Taichung City, 403", "Zhongming Elementary School", "West District"],
-                "大墩七街河南路口":["No. 408, Dadun 7th Street & Section 4 Henan Road, Nantun District, Taichung City, 408", "Dadun 7th St & Henan Rd", "Nantun District"],
-                "臺中仁愛醫院":["Section 1 Taiwan Boulevard, Xingzhong Street, Central District, Taichung City, 400", "Ran Ai Hospital", "Central District"],
-                "博館育德路口":["Boguan Road & Yude Road, North District, Taichung City, 404", "Boguan Rd & Yude Rd", "North District"],
-                "科博館/金典酒店":["No. 426, Section 2, Taiwan Boulevard, West District, Taichung City, 403", "National Museum of Natural Science/Splendor Hotel", "West District"],
-                "中正國小":["Yingcai Road & Lane 179, Section 2, Taiwan Blvd, West District, Taichung City, 403", "Chungcheng Elementary School", "West District"],
-                "茄苳腳":["Section 1, Xitun Road & Section 2, Meichuan E Rd, West District, Taichung City, 403", "Qiedongjiao", "West District"],
-                "萬壽棒球場":["Section 1 Xiangshang Road & Dajin Street, West District, Taichung City, 403", "Wan Shou Baseball Field", "West District"],
-                "公益公園":["Zhongming South Road & Gongyi Rd, West District, Taichung City, 403", "Gong Yi Park", "West District"],
-                "大墩文化中心":["Wuquan Road & Yingcai Road, West District, Taichung City, 403", "Dadun Cultural Centre", "West District"],
-                "英士公園":["Yingshi Rd, Rixing Street, North District, Taichung City, 404", "Yingshi Park", "North District"],
-                "大隆東興路口":["No. 69, Dalong Road, West District, Taichung City, 403", "Dalong Rd & Dongxing Rd", "West District"],
-                "文心森林公園":["Section 2, Xiangshang Road, Nantun District, Taichung City, 408", "Wenxin Forest Park", "Nantun District"],
-                "五權西文心路口":["Section 1, Wenxin Road, Nantun District, Taichung City, 408", "Wuquan West Rd & Wenxin Rd", "Nantun District"],
-                "臺中州廳":["Minquan Road & Shifu Road, West District, Taichung City, 403", "Taichung City Hall", "West District"],
-                "臺中公園":["Gongyuan Road & Ziyou Road, Central District, Taichung City, 400", "Taichung Park", "Central District"],
-                "臺中孔廟":["Section 2, Shuangshi Road, North District, Taichung City, 404", "Taichung Confucius Temple", "North District"],
-                "育德梅川東路口":["Yude Road, North District, Taichung City, 404", "Yude Rd & Meichuan E Rd", "North District"],
-                "太原北中清路口":["Taiyuan North Road & Zhongqing Road, North District, Taichung City, 404", "Taiyuan N Rd & Zhongqing Rd", "North District"],
-                "臺中教育大學":["Wuquan Road, West District, Taichung City, 403", "NTCU Department of Language and Literacy Education", "West District"],
-                "學士育德路口":["Xueshi Road, North District, Taichung City, 404", "Xueshi Rd & Yude Rd", "North District"],
-                "中山地政事務所":["Section 8, Zhongqing Road, Qingshui District, Taichung City, 436", "Taichung City Zhongshan Land Office", "Qingshui District"],
-                "市民廣場":["Gongyi Road & Zhongxing St, West District, Taichung City, 403", "Taichung Civis Square", "West District"],
-                "國立自然科學博物館":["No. 101, Boguan Road, West District, Taichung City, 403", "National Museum of Natural Science", "West District"],
-                "經國園道":["Yingcai Road & Xiangshang Road, West District, Taichung City, 403", "Ching Kuo Greenway//Calligraphy Greenway", "West District"],
-                "國立臺灣美術館":["Section 1, Meicun Road & Section 1, Wuquan Road, West District, Taichung City, 403", "National Taiwan Museum of Fine Arts", "West District"],
-                "北區行政大樓":["Yongxing Street & Section 2, Taiyuan Road, North District, Taichung City, 404", "North District Household Registration Office", "North District"],
-                "三光太原路口":["Section 3, Taiyuan Road, Beitun District, Taichung City, 406", "Sanguang Rd & Taiyuan Rd", "Beitun District"],
-                "北屯兒童公園":["Section 1, Xing'''an Road & Section 4, Beiping Road, Beitun District, Taichung City, 406", "Beitun Children'''s Park", "Beitun District"],
-                "力行國小":["Jinhua Road, East District, Taichung City, 401", "Taichung Municipal Li Sing Elementary School", "East District"],
-                "臺中一中":["Yucai Street & Zunxian Street, North District, Taichung City, 404", "Municipal Taichung First Senior High School", "North District"],
-                "忠誠公園":["Section 1, Huamei W St, West District, Taichung City, 403", "Zhongcheng Park", "West District"],
-                "賴明公園":["Section 3, Meichuan East Road & Section 4, HanKou Road, North District, Taichung City, 404", "LaiMin Park", "North District"],
-                "國立臺中文華高中":["Section 3, Wenxin Road & Section 1, Henan Road, Xitun District, Taichung City, 407", "Taichung Municipal Wen-Hua Senior High School", "Xitun District"],
-                "崇倫公園":["Section 1, Nantun Road, West District, Taichung City, 403", "Chonglun Park", "West District"],
-                "臺中火車站":["No. 113, Jianguo Road, Central District, Taichung City, 400", "Taichung Railway Station", "Central District"],
-                "黎明國中":["No. 610, Section 2, Liming Road, Nantun District, Taichung City, 408", "Limingguomin High School", "Nantun District"],
-                "豐樂雕塑公園":["Wenxin S. 5th Rd & Xiangxin S Rd, Nantun District, Taichung City, 408", "Fongle Sculpture Park", "Nantun District"],
-                "惠文高中":["No. 48 Section 2, Huizhong Road & Daye Road, Nantun District, Taichung City, 408", "HuiWen High School", "Nantun District"],
-                "上石公園":["Section 2, Xitun Road & Shangshi N 5th Ln, Xitun District, Taichung City, 407", "Shangshi Park", "Xitun District"],
-                "英才公園":["Yingcai Road, North District, Taichung City, 404", "Yingcai Park", "North District"],
-                "中德公園":["Zhongtai East Road & Zhongming 6th St, North District, Taichung City, 404", "Zhongde Park", "North District"],
-                "向心兒童公園":["Wenxin South 2nd Road, Lane 905, Xiangxin S Rd, Nantun District, Taichung City, 408", "Xiangxin Children'''s Park", "Nantun District"],
-                "市政公園停車場":["Shizheng North 5th Road, Xitun District, Taichung City, 407", "Shizheng Park Parking Lot", "Xitun District"],
-                "民俗公園":["Section 2, Rehe Road & Section 2, Dalian Rd, Beitun District, Taichung City, 406", "Minsu (Folklore) Park", "Beitun District"],
-                "臺中國小":["Xinyi Street, East District, Taichung City, 401", "Taichung Elementary School", "East District"],
-                "國立中興大學":["Xingda Road, South District, Taichung City, 402", "National Chung Hsing University", "South District"],
-                "大業公園":["No. 408 Dajin St & Daye Rd, Nantun District, Taichung City, 408", "Daye Park", "Nantun District"],
-                "忠孝國光路口":["Zhongxiao Road, South District, Taichung City, 402", "Zhongxiao Rd & Guoguang Rd", "South District"],
-                "大智國小":["Dazhi Road, East District, Taichung City, 401", "Dazhi Elementary School", "East District"],
-                "健行國小":["Jianxing Road & Jianxing Road, 664 Lane, North District, Taichung City, 404", "Jianxing Elementary School", "North District"],
-                "東峰公園":["Renhe Road & Lide East Street, East District, Taichung City, 401", "Dongfeng Park (aka 228 Memorial Park)", "East District"],
-                "太原華美街口":["Section 1, Taiyuan Road & Section 2, Huamei Street, North District, Taichung City, 404", "Taiyuan Rd & Huamei St", "North District"],
-                "柳川東中華路口":["Section 4, Liuchuan East Road, North District, Taichung City, 404", "Liuchuan E Rd & Zhonghua Rd", "North District"],
-                "忠明南美村南路口":["Meicun South Road, South District, Taichung City, 402", "Zhongming S Rd & Meicun S Rd", "South District"],
-                "忠明南復興路口":["No. 790, Zhongming South Road, South District, Taichung City, 402", "Zhongming S Rd & Fuxing Rd", "South District"],
-                "新福公園":["Section 2, Hanxi East Road & Section 4, Zhongshan Road, Taiping District, Taichung City, 406", "Shinfold Park", "Taiping District"],
-                "積善公園":["Daming Road & Xingda Road, Dali District, Taichung City, 412", "Jishan Park Station", "Dali District"],
-                "山西公園":["Section 2, Shanxi Road & Section 2, Beiping Road, North District, Taichung City, 404", "Shanxi Park", "North District"],
-                "北屯區文昌國小":["No. 51-83, Section 1, Xing'''an Road, Beitun District, Taichung City, 406", "Beitun Wenchang Elementary School", "Beitun District"],
-                "祥順運動公園":["Lane 87, Yichang Road, Taiping District, Taichung City, 406", "Xiangshun Sport Park", "Taiping District"],
-                ""
+        
+        if key == 'EBike_CY':
+            self.eBikeData  = {
+                "嘉義醫院站":{
+                    "stnNO" : 1,
+                    "adCn"  : "嘉義市西區北港路312號",
+                    "snCn"  : "嘉義醫院站",
+                    "saCn"  : "西區",
+                    
+                    "adEn"  : "No.312, Beigang Rd., West Dist., Chiayi City, 600",
+                    "snEn"  : "Chia-Yi Hospital",
+                    "saEn"  : "West Dist.",
+                    
+                    "lat"   : "23.48043",
+                    "lng"   : "120.4297",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "體育館站":{
+                    "stnNO" : 2,
+                    "adCn"  : "嘉義市東區彌陀路上垂楊路日新路之間",
+                    "snCn"  : "體育館站",
+                    "saCn"  : "東區",
+                    
+                    "adEn"  : "Intersection amoung Mituo Road, Chuiyang Road & Rixin Road, East District, Chiayi City, 600",
+                    "snEn"  : "Chiayi City Gymnasium",
+                    "saEn"  : "East Dist.",
+                    
+                    "lat"   : "23.47388",
+                    "lng"   : "120.4623",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "興業吳鳳站":{
+                    "stnNO" : 3,
+                    "adCn"  : "嘉義市東區興業東路近吳鳳南路口",
+                    "snCn"  : "興業吳鳳站",
+                    "saCn"  : "東區",
+                    
+                    "adEn"  : "Xingye E Road & Wufeng S. Road, East District, Chiayi City, 600",
+                    "snEn"  : "Xingye E. Road & Wufeng S. Road",
+                    "saEn"  : "East Dist.",
+                    
+                    "lat"   : "23.46931",
+                    "lng"   : "120.45475",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "文化公園站":{
+                    "stnNO" : 4,
+                    "adCn"  : "嘉義市東區文化路口與康樂街口",
+                    "snCn"  : "文化公園站",
+                    "saCn"  : "東區",
+                    
+                    "adEn"  : "Wenhua Road & Kangle Street, West District, Chiayi City, 600",
+                    "snEn"  : "Wenhua Park",
+                    "saEn"  : "East Dist.",
+                    
+                    "lat"   : "23.47509",
+                    "lng"   : "120.45019",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "嘉義公園站":{
+                    "stnNO" : 5,
+                    "adCn"  : "嘉義市東區中山路10號與啟明路口",
+                    "snCn"  : "嘉義公園站",
+                    "saCn"  : "東區",
+                    
+                    "adEn"  : "No. 10, Zhongshan Road & Qiming Road, East District, Chiayi City, 600",
+                    "snEn"  : "Chiayi Park",
+                    "saEn"  : "East Dist.",
+                    
+                    "lat"   : "23.48272",
+                    "lng"   : "120.46294",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "噴水站":{
+                    "stnNO" : 6,
+                    "adCn"  : "嘉義市東區中山路287號前",
+                    "snCn"  : "噴水站",
+                    "saCn"  : "東區",
+                    
+                    "adEn"  : "No. 287, Zhongshan Road, East District, Chiayi City, 600",
+                    "snEn"  : "Fountain",
+                    "saEn"  : "East Dist.",
+                    
+                    "lat"   : "23.48005",
+                    "lng"   : "120.45017",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "檜意站":{
+                    "stnNO" : 7,
+                    "adCn"  : "嘉義市東區忠孝路與共和路199巷路口",
+                    "snCn"  : "檜意站",
+                    "saCn"  : "東區",
+                    
+                    "adEn"  : "Zhongxiao Rd. & Lane 199, Gonghe Rd., East Dist., Chiayi City, 600",
+                    "snEn"  : "Fountain",
+                    "saEn"  : "East Dist.",
+                    
+                    "lat"   : "23.48603",
+                    "lng"   : "120.4538",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "三越遠東站":{
+                    "stnNO" : 8,
+                    "adCn"  : "嘉義市西區垂楊路廣寧路口",
+                    "snCn"  : "三越遠東站",
+                    "saCn"  : "西區",
+                    
+                    "adEn"  : "Chuiyang Road & Guangning Street, West District, Chiayi City, 600",
+                    "snEn"  : "SOGO & Far East",
+                    "saEn"  : "West Dist.",
+                    
+                    "lat"   : "23.47294",
+                    "lng"   : "120.44141",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "興業新民站":{
+                    "stnNO" : 9,
+                    "adCn"  : "嘉義市西區興業西路與新民路路口",
+                    "snCn"  : "興業新民站",
+                    "saCn"  : "西區",
+                    
+                    "adEn"  : "Xingye West Road & Xinmin Road, West District, Chiayi City, 600",
+                    "snEn"  : "SOGO & Far East",
+                    "saEn"  : "West Dist.",
+                    
+                    "lat"   : "23.46794",
+                    "lng"   : "120.44033",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "家樂福站":{
+                    "stnNO" : 10,
+                    "adCn"  : "嘉義市西區博愛路二段興業西路口",
+                    "snCn"  : "家樂福站",
+                    "saCn"  : "西區",
+                    
+                    "adEn"  : "Section 2, Bo'ai Road & Xingye West Road, West District, Chiayi City, 600",
+                    "snEn"  : "Carrefour",
+                    "saEn"  : "West Dist.",
+                    
+                    "lat"   : "23.47124",
+                    "lng"   : "120.43085",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "嘉義火車站":{
+                    "stnNO" : 11,
+                    "adCn"  : "嘉義市西區中山路528號(嘉義火車站剪票口附近汽車停等區)",
+                    "snCn"  : "嘉義火車站",
+                    "saCn"  : "西區",
+                    
+                    
+                    "adEn"  : "No. 528, Zhongshan Road, West District, Chiayi City, 600 (Chiayi Train Station Boarding Entrance near Car Waiting Zone)",
+                    "snEn"  : "Chiayi Train Station",
+                    "saEn"  : "West Dist.",
+                    
+                    
+                    "lat"   : "23.47896",
+                    "lng"   : "120.44108",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                }
+            }
+            
+
+        if key == 'KBike_KM':
+            
+            self.kBikeData = {
+                "A1金城車站A": {
+                    "stnNO" : 1,
+                    "adCn"  : "民生路10號",
+                    "snCn"  : "A1金城車站A",
+                    "saCn"  : "金城鎮",
+                    
+                    
+                    "adEn"  : "No. 10, Minshen Road, County, Jincheng Township, Kinmen County, 893",
+                    "snEn"  : "A1 Kim Cheng Station A",
+                    "saEn"  : "Jincheng Township",
+                    
+                    
+                    "lat"   : "24.433994",
+                    "lng"   : "118.319938",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "A1金城車站B":{
+                    "stnNO" : 2,
+                    "adCn"  : "民生路10號",
+                    "snCn"  : "A1金城車站B",
+                    "saCn"  : "金城鎮",
+                    
+                    
+                    "adEn"  : "No. 10, Minshen Road, County, Jincheng Township, Kinmen County, 893",
+                    "snEn"  : "A1 Kim Cheng Station B",
+                    "saEn"  : "Jincheng Township",
+                    
+                    
+                    "lat"   : "24.433994",
+                    "lng"   : "118.319938",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "A2金城民防坑道出口":{
+                    "stnNO" : 3,
+                    "adCn"  : "光前路與珠浦西路",
+                    "snCn"  : "A2金城民防坑道出口",
+                    "saCn"  : "金寧鎮",
+                    
+                    
+                    "adEn"  : "Gongcian Road & Zhupu West Road, Jinning Township, Kinmen County, 892",
+                    "snEn"  : "A2 Kin Cheng Civil Defense Tunnel Exit",
+                    "saEn"  : "Jinning Township",
+                    
+                    
+                    "lat"   : "24.437065",
+                    "lng"   : "118.312256",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "A3縣立體育場A":{
+                    "stnNO" : 4,
+                    "adCn"  : "民族路與西海路三段",
+                    "snCn"  : "A3縣立體育場A",
+                    "saCn"  : "金城鎮",
+                    
+                    
+                    "adEn"  : "Minzhu Road & Section 3, SiHi Road, Jincheng Township, Kinmen County, 893",
+                    "snEn"  : "A3 Kinmen County Stadium",
+                    "saEn"  : "Jincheng Township",
+                    
+                    
+                    "lat"   : "24.430182",
+                    "lng"   : "118.315312",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "A3縣立體育場B":{
+                    "stnNO" : 5,
+                    "adCn"  : "民族路與西海路三段",
+                    "snCn"  : "A3縣立體育場B",
+                    "saCn"  : "金城鎮",
+                    
+                    
+                    "adEn"  : "Minzhu Road & Section 3, SiHi Road, Jincheng Township, Kinmen County, 893",
+                    "snEn"  : "A3 Kinmen County Stadium",
+                    "saEn"  : "Jincheng Township",
+                    
+                    
+                    "lat"   : "24.430182",
+                    "lng"   : "118.315312",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "A4莒光樓":{
+                    "stnNO" : 6,
+                    "adCn"  : "賢城路1號",
+                    "snCn"  : "A4莒光樓",
+                    "saCn"  : "金城鎮",
+                    
+                    
+                    "adEn"  : "No. 1, Xiancheng Road, Jincheng Township, Kinmen County, 893",
+                    "snEn"  : "A4 Jyuguang Tower",
+                    "saEn"  : "Jincheng Township",
+                    
+                    
+                    "lat"   : "24.425083",
+                    "lng"   : "118.318137",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "A5水頭碼頭":{
+                    "stnNO" : 7,
+                    "adCn"  : "西海路一段",
+                    "snCn"  : "A5水頭碼頭",
+                    "saCn"  : "金城鎮",
+                    
+                    
+                    "adEn"  : "Between No. 5 & No. 11, Sihi Road, Jincheng Township, Kinmen County, 893",
+                    "snEn"  : "A5 Shuitou Pier",
+                    "saEn"  : "Jincheng Township",
+                    
+                    
+                    "lat"   : "24.414469",
+                    "lng"   : "118.286348",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "A6水頭聚落":{
+                    "stnNO" : 8,
+                    "adCn"  : "前水頭 (水頭客棧附近)",
+                    "snCn"  : "A6水頭聚落",
+                    "saCn"  : "金城鎮",
+                    
+                    
+                    "adEn"  : "Chenshuitou, Jincheng Township, Kinmen County, 893 (around Shui Tou Inn)",
+                    "snEn"  : "A6 Shuitou (Huang clan)",
+                    "saEn"  : "Jincheng Township",
+                    
+                    
+                    "lat"   : "24.411498",
+                    "lng"   : "118.296849",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "A7翟山坑道":{
+                    "stnNO" : 9,
+                    "adCn"  : "往翟山坑道的道路上",
+                    "snCn"  : "A7翟山坑道",
+                    "saCn"  : "金城鎮",
+                    
+                    
+                    "adEn"  : "Jincheng Township, Kinmen County, 893 (on the path to Zhaishan Tunnel)",
+                    "snEn"  : "A7 Zhaishan Tunnel",
+                    "saEn"  : "Jincheng Township",
+                    
+                    
+                    "lat"   : "24.390557",
+                    "lng"   : "118.320793",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "A8珠山聚落":{
+                    "stnNO" : 10,
+                    "adCn"  : "珠山 (薛永南兄弟大樓旁)",
+                    "snCn"  : "A8珠山聚落",
+                    "saCn"  : "金城鎮",
+                    
+                    
+                    "adEn"  : "Jusan, Jincheng Township, Kinmen County, 893 (beside Xue Yong Nan Brothers' Building)",
+                    "snEn"  : "A8 Jusan Clan",
+                    "saEn"  : "Jincheng Township",
+                    
+                    
+                    "lat"   : "24.402838",
+                    "lng"   : "118.321120",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "B1金門大學A":{
+                    "stnNO" : 11,
+                    "adCn"  : "金門大學與榕園之間的道路",
+                    "snCn"  : "B1金門大學A",
+                    "saCn"  : "金寧鎮",
+                    
+                    
+                    "adEn"  : "The road between National Quemoy/Kinmen University and Banyan Park (Ron-Yuan)",
+                    "snEn"  : "B1 Kinmen University A",
+                    "saEn"  : "Jinning Township",
+                    
+                    
+                    "lat"   : "24.448731",
+                    "lng"   : "118.321653",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "B1金門大學B":{
+                    "stnNO" : 12,
+                    "adCn"  : "金門大學與榕園之間的道路",
+                    "snCn"  : "B1金門大學B",
+                    "saCn"  : "金寧鎮",
+                    
+                    
+                    "adEn"  : "The road between National Quemoy/Kinmen University and Banyan Park (Ron-Yuan)",
+                    "snEn"  : "B1 Kinmen University B",
+                    "saEn"  : "Jinning Township",
+                    
+                    
+                    "lat"   : "24.448731",
+                    "lng"   : "118.321653",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "B2慈湖三角堡":{
+                    "stnNO" : 13,
+                    "adCn"  : "三角堡",
+                    "snCn"  : "B2慈湖三角堡",
+                    "saCn"  : "金寧鎮",
+                    
+                    
+                    "adEn"  : "Section 3, Cihu Road, Jinning Township, Kinmen County, 892 (Triangle Fortress)",
+                    "snEn"  : "B2 Cihu Triangle Fortress",
+                    "saEn"  : "Jinning Township",
+                    
+                    
+                    "lat"   : "24.465424",
+                    "lng"   : "118.297757",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "B3和平紀念公園":{
+                    "stnNO" : 14,
+                    "adCn"  : "頂林路與環島西路二段 (臨金門和平紀念園)",
+                    "snCn"  : "B3和平紀念公園",
+                    "saCn"  : "金寧鎮",
+                    
+                    
+                    "adEn"  : "Dinglin Road & Section 2, Huandao West Road (Close to Kinmen Heping Memorial Park)",
+                    "snEn"  : "B3 Heping Memorial Park",
+                    "saEn"  : "Jinning Township",
+                    
+                    
+                    "lat"   : "24.475537",
+                    "lng"   : "118.316468",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "B4中山紀念林":{
+                    "stnNO" : 15,
+                    "adCn"  : "中山林遊客中心對面",
+                    "snCn"  : "B4中山紀念林",
+                    "saCn"  : "金寧鎮",
+                    
+                    
+                    "adEn"  : "No. 460, Section 2, Boyu Road, Jinning Township, Kinmen County, 892 (Across from Zhongshanlin Visitor Center)",
+                    "snEn"  : "B4 Zhongshanlin Memorial Forest",
+                    "saEn"  : "Jinning Township",
+                    
+                    
+                    "lat"   : "24.443960",
+                    "lng"   : "118.353098",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "B5后湖濱海公園":{
+                    "stnNO" : 16,
+                    "adCn"  : "后湖濱海公園(東湖路上)",
+                    "snCn"  : "B5后湖濱海公園",
+                    "saCn"  : "金寧鎮",
+                    
+                    
+                    "adEn"  : "HouHu Coast Park (on DonHu Road)",
+                    "snEn"  : "B5 HouHu Coast Park",
+                    "saEn"  : "Jinning Township",
+                    
+                    
+                    "lat"   : "24.417034",
+                    "lng"   : "118.344376",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "C1森林遊樂區":{
+                    "stnNO" : 17,
+                    "adCn"  : "金門森林遊樂區第一停車場旁",
+                    "snCn"  : "C1森林遊樂區",
+                    "saCn"  : "金沙鎮",
+                    
+                    
+                    "adEn"  : "Jinsha Township, Kinmen County, 890 (Beside Forest Recreation Parking Lot - The first Kinmen Parking Lot)",
+                    "snEn"  : "C1 Forest Recreation Area",
+                    "saEn"  : "Jinsha Township",
+                    
+                    
+                    "lat"   : "24.459053",
+                    "lng"   : "118.442588",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "C2陽翟聚落":{
+                    "stnNO" : 18,
+                    "adCn"  : "環道西路一段與陽翟",
+                    "snCn"  : "C2陽翟聚落",
+                    "saCn"  : "金沙鎮",
+                    
+                    
+                    "adEn"  : "Section 2, Huandao West Road & Yangzhai, Jinsha Township, Kinmen County, 890",
+                    "snEn"  : "C2 Yang Zhai Clan",
+                    "saEn"  : "Jinsha Township",
+                    
+                    
+                    "lat"   : "24.478418",
+                    "lng"   : "118.426839",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "C3沙美車站":{
+                    "stnNO" : 19,
+                    "adCn"  : "復興路與環島東路一段",
+                    "snCn"  : "C3沙美車站",
+                    "saCn"  : "金沙鎮",
+                    
+                    
+                    "adEn"  : "Section 1, Huandao East Road & FuXing Road, Jinsha Township, Kinmen County, 890",
+                    "snEn"  : "C3 Shamei Station",
+                    "saEn"  : "Jinsha Township",
+                    
+                    
+                    "lat"   : "24.488795",
+                    "lng"   : "118.413285",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "C4文化園區":{
+                    "stnNO" : 20,
+                    "adCn"  : "田墩",
+                    "snCn"  : "C4文化園區",
+                    "saCn"  : "金沙鎮",
+                    
+                    
+                    "adEn"  : "Tian Tun, ",
+                    "snEn"  : "C4 Cultural Park",
+                    "saEn"  : "Jinsha Township",
+                    
+                    
+                    "lat"   : "24.497403",
+                    "lng"   : "118.402782",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "C5獅山砲陣地":{
+                    "stnNO" : 21,
+                    "adCn"  : "陽沙路",
+                    "snCn"  : "C5獅山砲陣地",
+                    "saCn"  : "金沙鎮",
+                    
+                    
+                    "adEn"  : "Yangsha Road ,Jinsha Township, Kinmen County, 890",
+                    "snEn"  : "C5 Shishan (Mt. Lion) Howitzer Front",
+                    "saEn"  : "Jinsha Township",
+                    
+                    
+                    "lat"   : "24.504082",
+                    "lng"   : "118.437352",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "D1尚義機場":{
+                    "stnNO" : 22,
+                    "adCn"  : "金門尚義機場旅遊服務中心右邊",
+                    "snCn"  : "D1尚義機場",
+                    "saCn"  : "金湖鎮",
+                    
+                    
+                    "adEn"  : "On the Right of Kinmen Airport Tourist Information Center",
+                    "snEn"  : "D1 Shang Yi / Kinmen Airport",
+                    "saEn"  : "Jinhu Township",
+                    
+                    
+                    "lat"   : "24.437375",
+                    "lng"   : "118.369578",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "D2柳營一營區":{
+                    "stnNO" : 23,
+                    "adCn"  : "環島南路三段 (王氏家廟後方)",
+                    "snCn"  : "D2柳營一營區",
+                    "saCn"  : "金湖鎮",
+                    
+                    
+                    "adEn"  : "Section 3, Huandao South Road, Jinhu Township, Kinmen County, 891 (Behind The Wong Temple)",
+                    "snEn"  : "D2 Luying 1st Campus",
+                    "saEn"  : "Jinhu Township",
+                    
+                    
+                    "lat"   : "24.438289",
+                    "lng"   : "118.379751",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "D3瓊林坑道":{
+                    "stnNO" : 24,
+                    "adCn"  : "怡穀堂旁",
+                    "snCn"  : "D3瓊林坑道",
+                    "saCn"  : "金湖鎮",
+                    
+                    
+                    "adEn"  : "Cyongyi Road, Jinhu Township, Kinmen County, 891 (Beside Yi Gu Tang)",
+                    "snEn"  : "D3 Cyonglin Tunnels",
+                    "saEn"  : "Jinhu Township",
+                    
+                    
+                    "lat"   : "24.454866",
+                    "lng"   : "118.372630",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "D4山外車站":{
+                    "stnNO" : 25,
+                    "adCn"  : "復興西路與黃海路",
+                    "snCn"  : "D4山外車站",
+                    "saCn"  : "金湖鎮",
+                    
+                    
+                    "adEn"  : "Fuxing West Road & Huanghai Road, Jinhu Township, Kinmen County, 891",
+                    "snEn"  : "D4 Shanwai Bus Station",
+                    "saEn"  : "Jinhu Township",
+                    
+                    
+                    "lat"   : "24.442308",
+                    "lng"   : "118.414262",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "D5畜試所":{
+                    "stnNO" : 26,
+                    "adCn"  : "惠民富康農莊17號 (畜產試驗所旁)",
+                    "snCn"  : "D5畜試所",
+                    "saCn"  : "金湖鎮",
+                    
+                    
+                    "adEn"  : "No. 17, Huiminfukang Farm, Kinmen County, Jinhu Township, 891",
+                    "snEn"  : "D5 Animal Products Research Institute",
+                    "saEn"  : "Jinning Township",
+                    
+                    
+                    "lat"   : "24.433307",
+                    "lng"   : "118.438134",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "D6中正公園":{
+                    "stnNO" : 27,
+                    "adCn"  : "中正公園 (明園民宿對面)",
+                    "snCn"  : "D6中正公園",
+                    "saCn"  : "金湖鎮",
+                    
+                    
+                    "adEn"  : "Section 3, Taihu Road, Jinhu Township, Kinmen County, 891 (Across from Ming Yuan Bed And Breakfast)",
+                    "snEn"  : "D6 Zhong Zheng Park",
+                    "saEn"  : "Jinning Township",
+                    
+                    
+                    "lat"   : "24.436906",
+                    "lng"   : "118.426258",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "E1羅厝漁港":{
+                    "stnNO" : 28,
+                    "adCn"  : "南環道 (臨 列嶼羅厝西湖古廟-天上聖母)",
+                    "snCn"  : "E1羅厝漁港",
+                    "saCn"  : "烈嶼鄉",
+                    
+                    
+                    "adEn"  : "Nan Huan Road, Lieyu Township, Kinmen County, 894 (Near Xi Hu Old Temple)",
+                    "snEn"  : "E1 Luocuo fishing Harbor",
+                    "saEn"  : "Lieyu Township",
+                    
+                    
+                    "lat"   : "24.424904",
+                    "lng"   : "118.259380",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                },
+                
+                "E2烈嶼鄉文化館":{
+                    "stnNO" : 29,
+                    "adCn"  : "西路1號 (忠義廟對面)",
+                    "snCn"  : "E2烈嶼鄉文化館",
+                    "saCn"  : "烈嶼鄉",
+                    
+                    
+                    "adEn"  : "No. 1, Xi Road, Lieyu Township, Kinmen County, 894 (Across from Zhong Yi Temple)",
+                    "snEn"  : "E2 Lieyu Township Cultural Museum",
+                    "saEn"  : "Lieyu Township",
+                    
+                    
+                    "lat"   : "24.431334",
+                    "lng"   : "118.244748",
+                    
+                    
+                    "pic1"  : "",
+                    "pic2"  : ""
+                }
             }
     
+    # ============== UBIKE =========================
+    
+    # Get Info from UBike Official Site
     def extractUBikeInfo(self, soup):
         js = soup.find_all("script")
         # Get the last <script></script>
@@ -150,75 +895,286 @@ class WebSite_Decoder:
         # Decode Percent-Encoding 
         # Now it becomes a dictionary
         return urllib.unquote(substring)
-        
-    def recordUBikeInfo(self, records, key):
+    
+    # Record the UBike Data and save in DB
+    def recordUBikeInfo(self, records, key, isEn):
         tbMgr = self.tbMgr
+        
         for stn, record in records.iteritems():
-            stnNO      = int(record['sno'])
+            
+            stnNO   = int(record['sno'])
+            adCn    = ""
+            snCn    = ""
+            saCn    = ""
+            
+            adEn    = ""
+            snEn    = ""
+            saEn    = ""
 
-            adCn       = record['ar']
-            snCn       = record['sna']
-            saCn       = record['sarea']
+            tot     = '0'
+            bikes   = '0'
+            spaces  = '0'
 
-            adEn       = "Coming Soon"
-            snEn       = "Coming Soon"
-            saEn       = "Coming Soon"
+            uDate   = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            lat     = '0.00000'
+            lng     = '0.00000'
+            act     = 0
+            
+            pic1    = ""
+            pic2    = ""
 
-            tot        = int(record['tot'])
-            bikes      = int(record['sbi'])
-            spaces     = int(record['bemp'])
 
-            uDate      = self.strptime(record['mday'], '%Y%m%d%H%M%S')
-            lat        = float(record['lat'])
-            lng        = float(record['lng'])
-            act        = 1
-#            act        = int(record['act'])
+            if isEn:
+                adEn        = record['ar'].replace('+', " ")
+                snEn        = record['sna'].replace('+', " ")
+                saEn        = record['sarea'].replace('+', " ")
+            else:  
+                adCn        = record['ar']
+                snCn        = record['sna']
+                saCn        = record['sarea']
+                adEn        = ""
+                snEn        = ""
+                saEn        = ""
 
-            #Check if the stnNO exists
+                tot        = int(record['tot'])
+                bikes      = int(record['sbi'])
+                spaces     = int(record['bemp'])
+
+                uDate      = self.strptime(record['mday'], '%Y%m%d%H%M%S')
+                lat        = float(record['lat'])
+                lng        = float(record['lng'])
+                act        = 1
+                
+
+            self.writeDB(tbMgr, stnNO, adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, pic1, pic2, key, isEn)
+                
+        print(key + " Updated")
+    
+    #================ UBIKE END ======================
+    
+    #================= EBIKE =========================
+    
+    def extractEBikeInfo(self, soup):
+        trs = soup.find_all("tr", {"id" : 'tr'})
+        records = {}
+        for tr in trs:
+            tds = tr.find_all("td", {"class": 'css_td'})
+            if len(tds) > 0:
+                dic = {}
+                key = tds[0].get_text()
+                if key in self.eBikeData.keys():
+                    dic     = self.eBikeData[key.encode('utf-8')]
+                    snCn    = dic["snCn"]
+                    
+                    bikes   = tds[1].get_text()
+                    spaces  = tds[2].get_text()
+                    
+                    tot     = str(int(bikes) + int(spaces))
+                    act     = 0
+                    
+                    if tds[3].get_text() == "正常營運":
+                        act     = 1
+                    dic["act"]    = act
+                    dic["bikes"]  = bikes
+                    dic["spaces"] = spaces
+                    dic["tot"]  = tot
+                    
+                    records[snCn] = dic
+                    
+        return records
+    
+    
+    
+    def recordEBikeInfo(self, records, key):
+        tbMgr = self.tbMgr
+        
+        for stn, record in records.iteritems():
+            
+            stnNO   = int(record['stnNO'])
+            adCn    = record["adCn"]
+            snCn    = record["snCn"]
+            saCn    = record["saCn"]
+            
+            adEn    = record["adEn"]
+            snEn    = record["snEn"]
+            saEn    = record["saEn"]
+
+            tot     = int(record["tot"])
+            bikes   = int(record["bikes"])
+            spaces  = int(record["spaces"])
+
+            uDate   = time.strftime("%Y%m%d%H%M%S")
+            lat     = float(record['lat'])
+            lng     = float(record['lng'])
+            act     = record["act"]
+            
+            pic1    = record["pic1"]
+            pic2    = record["pic2"]
+            
+            self.writeDB(tbMgr, stnNO, adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, pic1, pic2, key, False)
+                
+        print(key + " Updated")
+    
+    #================= EBIKE END =========================
+    
+    #================= KBIKE    ==========================
+    
+    def extractKBikeInfo(self, soup):
+        divCs   = soup.find_all("div", {"class":"ui-grid-c"})
+        
+#        </div>
+#            更新時間: 2017-08-06 11:57:09</div>
+#                        </body>
+
+#        extracter = re.compile()
+
+        dateStr = soup.find("div", {"id":"pageone"}).contents[-1]
+        
+        date    = dateStr.replace("更新時間: ", "")
+        
+        records = {}
+        
+        for divC in divCs:
+            
+            blockAs = divC.find("div", {"class":"ui-block-a"})
+            blockBs = divC.find("div", {"class":"ui-block-b"})
+            blockCs = divC.find("div", {"class":"ui-block-c"})
+            blockDs = divC.find("div", {"class":"ui-block-d"})
+            
+            for blockA, blockB, blockC, blockD in zip(blockAs, blockBs, blockCs, blockDs):
+                if blockA.find("a") == -1 or blockA.find("a") == None:
+                    continue
+                else:
+                    # FETCH all the valid Contents
+                    # snCn is used as key
+                    key     = blockA.find("a").contents[0]
+                    bikes   = int(blockB.contents[0])
+                    spaces  = int(blockC.contents[0])
+                    tot     = bikes + spaces
+                    img     = blockD.img.get("src")[0]
+                    act     = 1
+                    if "gg" in img:
+                        act = 0
+                    
+                    if key in self.kBikeData.keys():
+                        dic     = self.kBikeData[key.encode('utf-8')]
+                        
+                        dic["bikes"]    = bikes
+                        dic["spaces"]   = spaces
+                        dic["tot"]      = tot
+                        dic["uDate"]    = date
+                        dic["act"]      = act
+                        records[key]    = dic
+        return records
+    
+    
+    def recordKBikeInfo(self, records, key):
+        tbMgr = self.tbMgr
+        
+        for stn, record in records.iteritems():
+            
+            stnNO   = int(record['stnNO'])
+            adCn    = record["adCn"]
+            snCn    = record["snCn"]
+            saCn    = record["saCn"]
+            
+            adEn    = record["adEn"]
+            snEn    = record["snEn"]
+            saEn    = record["saEn"]
+
+            tot     = int(record["tot"])
+            bikes   = int(record["bikes"])
+            spaces  = int(record["spaces"])
+
+            uDate   = time.strftime("%Y-%m-%d %H:%M:%S")
+            lat     = float(record['lat'])
+            lng     = float(record['lng'])
+            act     = record["act"]
+            
+            pic1    = record["pic1"]
+            pic2    = record["pic2"]
+            
+            self.writeDB(tbMgr, stnNO, adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, pic1, pic2, key, False)
+                
+        print(key + " Updated")
+    
+    #================= KBIKE END =========================
+    
+    #================= FUNCTIONS =========================
+    def strToArr(self, strings, sep):
+        array = []
+        for string in strings:
+            array.append(re.split(sep, string))
+        return array
+    
+    # input all data and Write into DB
+    def writeDB(self, tbMgr, stnNO, adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, pic1, pic2, key, isEn):
+        #Check if the stnNO exists
 
             checkData = ("SELECT * FROM " + key + \
                         " WHERE stnNO = '" + \
                          str(stnNO) + "'")
-            print(checkData)
-            if not tbMgr.checkData(checkData):
-                #As the whole query needs to be in a string format while execution of query so %s should be used.
-                addData = ("INSERT INTO " + key + \
-                           "(stnNO, adCn, snCn, saCn," + \
-                           " adEn, snEn, saEn," + \
-                           " tot, bikes, spaces," + \
-                           " uDate, lat, lng, act)" + \
-                           " VALUES(%s, %s, %s, %s," + \
-                           " %s, %s, %s, %s, %s," + \
-                           " %s, %s, %s, %s, %s)")
-
-                dataToAdd = (stnNO, adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act)
-
-                #insert
-                tbMgr.insertData(addData, dataToAdd)
-            else:
-                updateData = ("UPDATE " + key + \
-                              " SET adCn    = %s," + \
-                              " snCn    = %s," + \
-                              " saCn    = %s," + \
-                              " adEn    = %s," + \
-                              " snEn    = %s," + \
-                              " saEn    = %s," + \
-                              " tot     = %s," + \
-                              " bikes   = %s," + \
-                              " spaces  = %s," + \
-                              " uDate   = %s," + \
-                              " lat     = %s," + \
-                              " lng     = %s," + \
-                              " act     = %s" + \
-                              " WHERE stnNO = %s")
-                dataToUpdate = (adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, stnNO)
-
-                tbMgr.updateData(updateData, dataToUpdate)
-        print(key + " Updated")
             
-    
-    def fetchadsnEns(self):
-        self.adsnEns = {}
+            if isEn:
+                if not tbMgr.checkData(checkData):
+                    #As the whole query needs to be in a string format while execution of query so %s should be used.
+                    addData = ("INSERT INTO " + key + \
+                               "(stnNO, adEn, snEn, saEn)" + \
+                               " VALUES(%s, %s, %s, %s)")
+
+                    dataToAdd = (stnNO, adEn, snEn, saEn)
+
+                    #insert
+                    tbMgr.insertData(addData, dataToAdd)
+                else:
+                    updateData = ("UPDATE " + key + \
+                                  " SET adEn    = %s," + \
+                                  " snEn    = %s," + \
+                                  " saEn    = %s" + \
+                                  " WHERE stnNO = %s")
+                    dataToUpdate = (adEn, snEn, saEn, stnNO)
+
+                    tbMgr.updateData(updateData, dataToUpdate)
+            else:
+                if not tbMgr.checkData(checkData):
+                    #As the whole query needs to be in a string format while execution of query so %s should be used.
+                    addData = ("INSERT INTO " + key + \
+                               "(stnNO, adCn, snCn, saCn," + \
+                               " adEn, snEn, saEn," + \
+                               " tot, bikes, spaces," + \
+                               " uDate, lat, lng, act," + \
+                               " pic1, pic2, type)" + \
+                               " VALUES(%s, %s, %s, %s," + \
+                               " %s, %s, %s, %s, %s," + \
+                               " %s, %s, %s, %s, %s," + \
+                               " %s, %s, %s)")
+
+                    dataToAdd = (stnNO, adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, pic1, pic2, key)
+
+                    #insert
+                    tbMgr.insertData(addData, dataToAdd)
+                else:
+                    updateData = ("UPDATE " + key + \
+                                  " SET adCn    = %s," + \
+                                  " snCn    = %s," + \
+                                  " saCn    = %s," + \
+                                  " adEn    = %s," + \
+                                  " snEn    = %s," + \
+                                  " saEn    = %s," + \
+                                  " tot     = %s," + \
+                                  " bikes   = %s," + \
+                                  " spaces  = %s," + \
+                                  " uDate   = %s," + \
+                                  " lat     = %s," + \
+                                  " lng     = %s," + \
+                                  " act     = %s," + \
+                                  " pic1    = %s," + \
+                                  " pic2    = %s," + \
+                                  " type    = %s"  + \
+                                  " WHERE stnNO = %s")
+                    dataToUpdate = (adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, pic1, pic2, key, stnNO)
+
+                    tbMgr.updateData(updateData, dataToUpdate)
     
     
     def checkType(self, var):

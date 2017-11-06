@@ -32,6 +32,8 @@ TN_TBike  = 'http://tbike.tainan.gov.tw:8081/Service/StationStatus/Json'
 # ============== xml =======================
 # 高雄
 KS_CBike  = 'http://www.c-bike.com.tw/xml/stationlistopendata.aspx'
+# 屏東
+PD_PBike    = 'http://pbike.pthg.gov.tw/xml/stationlist.aspx'
 
 # ============== gz ========================
 # 台北
@@ -39,41 +41,61 @@ TP_UBike  = 'http://data.taipei/youbike' #gz
 
 # =============== webSites =================
 # 新竹縣
-HCC_IBike = 'http://i.youbike.com.tw/cht/f12.php'
+HCC_IBike   = 'http://i.youbike.com.tw/cht/f12.php'
+HCC_IBikeE  = 'http://i.youbike.com.tw/en/f12.php'
 # 嘉義
-CY_EBike  = 'http://ebike.citypower.com.tw/station_list.php'
+CY_EBike    = 'http://ebike.citypower.com.tw/station_list.php'
 # 彰化
-CH_UBike  = 'http://chcg.youbike.com.tw/cht/f12.php'
-# 屏東
-PD_PBike  = 'http://pbike.pthg.gov.tw/Station/Station.aspx'
+CH_UBike    = 'http://chcg.youbike.com.tw/cht/f12.php'
+CH_UBikeE   = 'http://chcg.youbike.com.tw/en/f12.php'
 # 金門 => need coordinate
 # MAP => http://kbike.yachik.com/kbike_web/station.php 
-KM_KBike  = 'http://kbike.yachik.com/kbike_web/station_list.php '
+#KM_KBike    = 'http://kbike.yachik.com/kbike_web/station_list.php'
+KM_KBike    = 'http://kbike.yachik.com/recv/show_kbike_bike_info.php'
 # 新竹市
-HC_UBike  = 'http://hccg.youbike.com.tw/cht/f12.php'
+HC_UBike    = 'http://hccg.youbike.com.tw/cht/f12.php'
+HC_UBikeE   = 'http://hccg.youbike.com.tw/en/f12.php'
 # GET the CORRECT SITES
 
+
+# ============== RULES =======================
+TP_Rules    = ["https://taipei.youbike.com.tw/cht/f43.php",
+              "https://taipei.youbike.com.tw/en/f43.php"]
+
+HCC_Rules   = ["http://i.youbike.com.tw/cht/f43.php",
+               "http://i.youbike.com.tw/en/f43.php"]
+
+PD_Rules    = ["http://pbike.pthg.gov.tw/Station/Explanation.aspx",
+ "http://pbike.pthg.gov.tw/Station/ExplanationEn.aspx"]
 
 
 
 DB_NAME = 'BikeSmart'
 USER    = 'root'
 PWD     = 'root'
-#HOST    = '192.168.43.109'
 HOST    = 'localhost'
+ftp     = False
+
+
+if ftp:
+    USER    = 'jimmy-maltose@jimmy-maltose.appjam.space'
+    PWD     = 'LiuKuoPing@1129'
+    HOST    = 'ftp.appjam.space'
+    
+print(USER)
 
 Bike_Tables = ['UBike_NTP', 'UBike_TY', 'TBike_TN', 'CBike_KS', 'IBike_HCC', 'UBike_HC', 'EBike_CY', 'UBike_CH', 'PBike_PD', 'KBike_KM']
 
 jsonURLs    = {'UBike_NTP': NTP_UBike, 
                'UBike_TY':  TY_UBike}
 jsonTBike   = {'TBike_TN':  TN_TBike}
-xmlURLs     = {'CBike_KS':  KS_CBike}
-webSites    = {'IBike_HCC': HCC_IBike, 
-               'UBike_HC':  HC_UBike, 
-               'EBike_CY':  CY_EBike, 
-               'UBike_CH':  CH_UBike, 
-               'PBike_PD':  PD_PBike, 
-               'KBike_KM':  KM_KBike}
+xmlURLs     = {'CBike_KS':  KS_CBike,
+               'PBike_PD':  PD_PBike}
+webSites    = {'IBike_HCC': [HCC_IBike, HCC_IBikeE],
+               'EBike_CY':  [CY_EBike], 
+               'UBike_HC':  [HC_UBike, HC_UBikeE],
+               'UBike_CH':  [CH_UBike, CH_UBikeE],
+               'KBike_KM':  [KM_KBike]}
 
 # CREATE UBike Decoder
 statement = " stnNO         INT(4)          NOT NULL," + \
@@ -92,6 +114,7 @@ statement = " stnNO         INT(4)          NOT NULL," + \
     " act           TINYINT         NOT NULL," + \
     " pic1          VARCHAR(255)    ," + \
     " pic2          VARCHAR(255)    ," + \
+    " type          VARCHAR(255)    ," + \
     " PRIMARY KEY(stnNO)"
 
 ubikeDe = UBikeJSON_Decoder(DB_NAME, USER, PWD, HOST)

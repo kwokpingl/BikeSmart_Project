@@ -25,7 +25,9 @@
     
     UIViewController * mainVC = [MainVC new];
     
-    _window.rootViewController = mainVC;
+    UINavigationController * nvc = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    
+    _window.rootViewController = nvc;
     
     [GMSServices provideAPIKey:GoogleAPIKey]; // Must setup the GMSServices before presenting UI
     

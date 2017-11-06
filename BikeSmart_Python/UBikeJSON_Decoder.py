@@ -100,12 +100,12 @@ class UBikeJSON_Decoder:
                                "(stnNO, adCn, snCn, saCn," + \
                                " adEn, snEn, saEn," + \
                                " tot, bikes, spaces," + \
-                               " uDate, lat, lng, act)" + \
+                               " uDate, lat, lng, act, type)" + \
                                " VALUES(%s, %s, %s, %s," + \
                                " %s, %s, %s, %s, %s," + \
-                               " %s, %s, %s, %s, %s)")
+                               " %s, %s, %s, %s, %s, %s)")
 
-                    dataToAdd = (stnNO, adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act)
+                    dataToAdd = (stnNO, adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, key)
 
                     #insert
                     tbMgr.insertData(addData, dataToAdd)
@@ -123,9 +123,10 @@ class UBikeJSON_Decoder:
                                   " uDate   = %s," + \
                                   " lat     = %s," + \
                                   " lng     = %s," + \
-                                  " act     = %s" + \
+                                  " act     = %s," + \
+                                  " type    = %s"  + \
                                   " WHERE stnNO = %s")
-                    dataToUpdate = (adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, stnNO)
+                    dataToUpdate = (adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, key, stnNO)
                     
                     tbMgr.updateData(updateData, dataToUpdate)
             print(key + " Updated")
@@ -246,12 +247,13 @@ class UBikeJSON_Decoder:
                                "(stnNO, adCn, snCn, saCn," + \
                                " adEn, snEn, saEn," + \
                                " tot, bikes, spaces," + \
-                               " uDate, lat, lng, act)" + \
+                               " uDate, lat, lng, act," + \
+                               " type)" + \
                                " VALUES(%s, %s, %s, %s," + \
                                " %s, %s, %s, %s, %s," + \
-                               " %s, %s, %s, %s, %s)")
+                               " %s, %s, %s, %s, %s, %s)")
 
-                    dataToAdd = (stnNO, adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act)
+                    dataToAdd = (stnNO, adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, key)
 
                     #insert
                     tbMgr.insertData(addData, dataToAdd)
@@ -269,9 +271,10 @@ class UBikeJSON_Decoder:
                                   " uDate   = %s," + \
                                   " lat     = %s," + \
                                   " lng     = %s," + \
-                                  " act     = %s" + \
+                                  " act     = %s," + \
+                                  " type    = %s"  + \
                                   " WHERE stnNO = %s")
-                    dataToUpdate = (adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, stnNO)
+                    dataToUpdate = (adCn, snCn, saCn, adEn, snEn, saEn, tot, bikes, spaces, uDate, lat, lng, act, key,stnNO)
                     
                     tbMgr.updateData(updateData, dataToUpdate)
             print(key + " Updated")

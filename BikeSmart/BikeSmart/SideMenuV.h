@@ -17,9 +17,9 @@
 @end
 
 @interface SideMenuV : UIView
-@property (nonatomic, weak) id<SideMenuDelegate> delegate;
-@property (nonatomic, strong) NSMutableArray * menuList;
-@property (nonatomic) selectedIcon icon;
+@property (nonatomic, weak)     id<SideMenuDelegate> delegate;
+@property (nonatomic, strong)   NSMutableArray * menuList;
+@property (nonatomic)           selectedIcon icon;
 
 - (instancetype)initWithMinFrame:(CGRect)minFrame andMaxFrame: (CGRect) maxFrame;
 

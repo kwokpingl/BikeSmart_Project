@@ -44,6 +44,31 @@ typedef enum Icon {
 } selectedIcon;
 #undef X
 
+#define bike_stnNO  @"stnNO"
+
+#define bike_adCn   @"adCn"
+#define bike_saCn   @"saCn"
+#define bike_snCn   @"snCn"
+
+#define bike_adEn   @"adEn"
+#define bike_saEn   @"saEn"
+#define bike_snEn   @"snEn"
+
+#define bike_tot    @"tot"
+#define bike_bikes  @"bikes"
+#define bike_spaces @"spaces"
+
+#define bike_uDate  @"uDate"
+
+#define bike_lat    @"lat"
+#define bike_lng    @"lng"
+
+#define bike_act    @"act"
+
+#define bike_pic1   @"pic1"
+#define bike_pic2   @"pic2"
+
+#define bike_type   @"type"
 
 
 #endif /* Definitions_h */

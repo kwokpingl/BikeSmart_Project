@@ -3,7 +3,7 @@
 
     $usn        = "yourUserName";
     $pwd        = "yourPassword";
-    $host       = "usually is localhost" ;
+    $host       = "usually is localhost";
     $db         = "yourDataBaseName";
     $mainDB     = "yourDataBaseName";
 

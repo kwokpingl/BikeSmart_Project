@@ -1,0 +1,172 @@
+{
+    
+    /*  
+    宜蘭縣 ,花蓮縣 ,臺東縣 ,澎湖縣 ,金門縣 ,連江縣 ,臺北市 ,新北市 ,桃園市 ,臺中市 ,臺南市 ,高雄市 ,基隆市 ,新竹縣 ,新竹市 ,苗栗縣 ,彰化縣 ,南投縣 ,雲林縣 ,嘉義縣 ,嘉義市 ,屏東縣
+    */
+    // 宜蘭縣
+    "yilan county": {
+        "dataid":"F-D0047-001",
+        "locationNames":{
+            "toucheng township":"頭城鎮",
+            "jiaoxi township":"礁溪鄉",
+            "zhuangwei township":"壯圍鄉",
+            "yuanshan township":"員山鄉",
+            "yilan city":"宜蘭市",
+            "datong township":"大同鄉",
+            "wujie township":"五結鄉",
+            "sanxing township":"三星鄉",
+            "luodong township":"羅東鎮",
+            "dongshan township":"冬山鄉",
+            "nan'ao township":"南澳鄉",
+            "su'ao township":"蘇澳鎮"
+        }
+    },
+    // 花蓮縣
+    "hualien county": {
+        "dataid":"F-D0047-041",
+        "locationNames":{
+
+        }
+    },
+    // 臺東縣
+    "taitung county": {
+        "dataid":"F-D0047-037",
+        "locationNames":{
+
+        }
+    },
+    // 澎湖縣 
+    "penghu county": {
+        "dataid":"F-D0047-045",
+        "locationNames":{
+
+        }
+    },
+    // 金門縣
+    "kinmen county": {
+        "dataid":"F-D0047-085",
+        "locationNames":{
+
+        }
+    },
+    // 連江縣
+    "lienchiang county": {
+        "dataid":"F-D0047-081",
+        "locationNames":{
+
+        }
+    },
+    // 臺北市
+    "taipei city": {
+        "dataid":"F-D0047-061",
+        "locationNames":{
+
+        }
+    },
+    // 新北市
+    "new taipei city": {
+        "dataid":"F-D0047-069",
+        "locationNames":{
+
+        }
+    },
+    // 桃園市
+    "taoyuan city": {
+        "dataid":"F-D0047-005",
+        "locationNames":{
+
+        }
+    },
+    // 臺中市
+    "taichung city": {
+        "dataid":"F-D0047-073",
+        "locationNames":{
+
+        }
+    },
+    // 臺南市
+    "tainan city": {
+        "dataid":"F-D0047-077",
+        "locationNames":{
+
+        }
+    },
+    // 高雄市
+    "kaohsiung city": {
+        "dataid":"F-D0047-065",
+        "locationNames":{
+
+        }
+    },
+    // 基隆市
+    "keelung city": {
+        "dataid":"F-D0047-049",
+        "locationNames":{
+
+        }
+    },
+    // 新竹縣
+    "hsinchu county": {
+        "dataid":"F-D0047-009",
+        "locationNames":{
+
+        }
+    },
+    // 新竹市
+    "hsinchu city": {
+        "dataid":"F-D0047-053",
+        "locationNames":{
+
+        }
+    },
+    // 苗栗縣
+    "miaoli county": {
+        "dataid":"F-D0047-013",
+        "locationNames":{
+
+        }
+    },
+    // 彰化縣
+    "changhua county": {
+        "dataid":"F-D0047-017",
+        "locationNames":{
+
+        }
+    },
+    // 南投縣
+    "nantou county": {
+        "dataid":"F-D0047-021",
+        "locationNames":{
+
+        }
+    },
+    // 雲林縣
+    "yunlin county": {
+        "dataid":"F-D0047-025",
+        "locationNames":{
+
+        }
+    },
+    // 嘉義縣
+    "chiayi county": {
+        "dataid":"F-D0047-029",
+        "locationNames":{
+
+        }
+    },
+    // 嘉義市 
+    "chiayi city": {
+        "dataid":"F-D0047-057",
+        "locationNames":{
+
+        }
+    },
+    // 屏東縣
+    "pingtung county": {
+        "dataid":"F-D0047-033",
+        "locationNames":{
+
+        }
+    }
+        
+}

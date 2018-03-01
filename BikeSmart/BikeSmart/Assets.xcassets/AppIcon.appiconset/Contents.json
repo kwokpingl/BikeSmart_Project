@@ -71,6 +71,18 @@
       "scale" : "2x"
     },
     {
+      "size" : "50x50",
+      "idiom" : "ipad",
+      "filename" : "MainIcon-1.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "ipad",
+      "filename" : "MainIcon@2x.png",
+      "scale" : "2x"
+    },
+    {
       "idiom" : "ipad",
       "size" : "76x76",
       "scale" : "1x"
@@ -84,6 +96,22 @@
       "idiom" : "ipad",
       "size" : "83.5x83.5",
       "scale" : "2x"
+    },
+    {
+      "idiom" : "ios-marketing",
+      "size" : "1024x1024",
+      "scale" : "1x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "car",
+      "filename" : "MainIcon.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "car",
+      "size" : "60x60",
+      "scale" : "3x"
     }
   ],
   "info" : {

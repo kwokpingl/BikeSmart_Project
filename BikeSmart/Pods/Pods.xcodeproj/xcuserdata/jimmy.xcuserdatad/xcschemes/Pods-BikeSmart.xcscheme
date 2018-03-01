@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "757B36ED654FFB939FFA46B8ED9F0D10"
+               BlueprintIdentifier = "2F93D3AEFA8B8BE19C1BDF843D8E733C"
                BuildableName = "libPods-BikeSmart.a"
                BlueprintName = "Pods-BikeSmart"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "757B36ED654FFB939FFA46B8ED9F0D10"
+            BlueprintIdentifier = "2F93D3AEFA8B8BE19C1BDF843D8E733C"
             BuildableName = "libPods-BikeSmart.a"
             BlueprintName = "Pods-BikeSmart"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "757B36ED654FFB939FFA46B8ED9F0D10"
+            BlueprintIdentifier = "2F93D3AEFA8B8BE19C1BDF843D8E733C"
             BuildableName = "libPods-BikeSmart.a"
             BlueprintName = "Pods-BikeSmart"
             ReferencedContainer = "container:Pods.xcodeproj">

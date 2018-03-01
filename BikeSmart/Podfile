@@ -8,6 +8,7 @@ target 'BikeSmart' do
   # use_frameworks!
 
   # Pods for BikeSmart
-pod "GoogleMaps"
-pod "GooglePlaces"
+  pod "GoogleMaps"
+  pod "Google-Maps-iOS-Utils"
+  pod 'Realm'
 end

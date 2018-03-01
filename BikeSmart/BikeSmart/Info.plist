@@ -55,10 +55,18 @@
 	<string>Allow BikeSmart to access your Location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow BikeSmart to access your Location</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CaviarDreamsBold.ttf</string>
+		<string>CaviarDreams.ttf</string>
+		<string>CaviarDreams_BoldItalic.ttf</string>
+		<string>CaviarDreams_Italic.ttf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
 		<string>remote-notification</string>
+		<string>fetch</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

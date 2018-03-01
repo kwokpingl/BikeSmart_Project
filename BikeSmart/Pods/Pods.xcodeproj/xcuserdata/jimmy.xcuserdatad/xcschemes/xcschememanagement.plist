@@ -4,15 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-BikeSmart.xcscheme</key>
+		<key>Google-Maps-iOS-Utils.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Pods-BikeSmart.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>757B36ED654FFB939FFA46B8ED9F0D10</key>
+		<key>2F93D3AEFA8B8BE19C1BDF843D8E733C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4404F807FC972B1E707FD3E52662502B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E277627DF512F8EE67DF1F63E5247727</key>
 		<dict>
 			<key>primary</key>
 			<true/>

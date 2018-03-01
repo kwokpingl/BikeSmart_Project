@@ -8,64 +8,262 @@
 
 /* Begin PBXBuildFile section */
 		0880BD37676D24CCC899A254 /* libPods-BikeSmart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303F29A4AA2420C69CAD3916 /* libPods-BikeSmart.a */; };
+		BF010633201AB8360067C8FA /* SBBikeTypeCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF010632201AB8360067C8FA /* SBBikeTypeCVC.m */; };
+		BF010636201AB9910067C8FA /* TravelPlannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF010635201AB9910067C8FA /* TravelPlannerManager.m */; };
+		BF010639201ABB130067C8FA /* MileStone.m in Sources */ = {isa = PBXBuildFile; fileRef = BF010638201ABB130067C8FA /* MileStone.m */; };
+		BF01063D201ABE8E0067C8FA /* NSMutableArray+JLMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01063C201ABE8E0067C8FA /* NSMutableArray+JLMutableArray.m */; };
+		BF04E3121FD0FBD10050B836 /* AttributeStringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BF04E3111FD0FBD10050B836 /* AttributeStringUtil.m */; };
+		BF04E31D1FD12F5F0050B836 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF04E3181FD12F5F0050B836 /* CaviarDreams.ttf */; };
+		BF04E3201FD12F5F0050B836 /* readmenew.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF04E31B1FD12F5F0050B836 /* readmenew.txt */; };
+		BF04E3241FD132850050B836 /* UIFont+JLFont.m in Sources */ = {isa = PBXBuildFile; fileRef = BF04E3231FD132850050B836 /* UIFont+JLFont.m */; };
+		BF04E3271FD163030050B836 /* UIFontDescriptor+JLFontDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = BF04E3261FD163030050B836 /* UIFontDescriptor+JLFontDescriptor.m */; };
+		BF06ECBC1FE794250092BC82 /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF04E3191FD12F5F0050B836 /* CaviarDreams_BoldItalic.ttf */; };
+		BF06ECBD1FE794250092BC82 /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF04E31A1FD12F5F0050B836 /* CaviarDreams_Italic.ttf */; };
+		BF06ECBE1FE7942F0092BC82 /* CaviarDreamsBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF04E3171FD12F5F0050B836 /* CaviarDreamsBold.ttf */; };
+		BF101B3F1FEE271B0015E3A0 /* BikeClustersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF101B3E1FEE271B0015E3A0 /* BikeClustersManager.m */; };
+		BF101B421FEEC2940015E3A0 /* BikeClusterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF101B411FEEC2940015E3A0 /* BikeClusterItem.m */; };
+		BF101B491FEF6A450015E3A0 /* BikeMarkerAvailableIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF101B481FEF6A440015E3A0 /* BikeMarkerAvailableIndicatorView.m */; };
+		BF101B4C1FF0A1C20015E3A0 /* BikeClusterRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BF101B4B1FF0A1C20015E3A0 /* BikeClusterRenderer.m */; };
+		BF139C001FB6F350001DDA4D /* JLBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF139BFF1FB6F350001DDA4D /* JLBarButtonItem.m */; };
+		BF139C031FB7D7EA001DDA4D /* MessengerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BF139C021FB7D7EA001DDA4D /* MessengerUtil.m */; };
+		BF139C061FB7DBED001DDA4D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BF139C051FB7DBED001DDA4D /* Reachability.m */; };
+		BF139C0A1FB8942A001DDA4D /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF139C091FB89429001DDA4D /* LoadingView.m */; };
+		BF139C171FBA9F23001DDA4D /* TutorialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF139C161FBA9F23001DDA4D /* TutorialVC.m */; };
+		BF139C2D1FBE56D2001DDA4D /* Launch_IntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF139C2C1FBE56D2001DDA4D /* Launch_IntroView.m */; };
+		BF139C301FBE570D001DDA4D /* Launch_MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF139C2F1FBE570D001DDA4D /* Launch_MenuView.m */; };
+		BF139C351FBFC7C9001DDA4D /* JLScrollMileStoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF139C341FBFC7C9001DDA4D /* JLScrollMileStoneView.m */; };
+		BF139C381FBFCA32001DDA4D /* JLScrollMileStoneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF139C371FBFCA32001DDA4D /* JLScrollMileStoneButton.m */; };
+		BF139C3B1FC151B3001DDA4D /* JLPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF139C3A1FC151B3001DDA4D /* JLPageViewController.m */; };
+		BF1DD0531F8E0FF7009CD654 /* AdminAreaLocality.json in Resources */ = {isa = PBXBuildFile; fileRef = BF1DD0521F8E0FF7009CD654 /* AdminAreaLocality.json */; };
+		BF1DD0591F8E10DB009CD654 /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1DD0571F8E10DB009CD654 /* WeatherView.m */; };
+		BF1DD05C1F8E6B18009CD654 /* WeatherIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1DD05B1F8E6B18009CD654 /* WeatherIconView.m */; };
+		BF1DD0671F8FD01F009CD654 /* NSDictionary+NSDictionary_JLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1DD0661F8FD01E009CD654 /* NSDictionary+NSDictionary_JLDictionary.m */; };
+		BF24936C1FFA31D7006F29F6 /* BikeClusterIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF24936B1FFA31D7006F29F6 /* BikeClusterIconView.m */; };
+		BF24936F1FFB6752006F29F6 /* BikePieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = BF24936E1FFB6752006F29F6 /* BikePieChart.m */; };
+		BF2688BD1FA1BD510088D522 /* FlipPresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2688BC1FA1BD510088D522 /* FlipPresentAnimationController.m */; };
+		BF2688C01FA1BD640088D522 /* FlipDismissAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2688BF1FA1BD640088D522 /* FlipDismissAnimationController.m */; };
+		BF2688C31FA1CC780088D522 /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2688C21FA1CC780088D522 /* AnimationHelper.m */; };
+		BF28B1361FA6DB7C00B81082 /* CircularLoadingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF28B1351FA6DB7C00B81082 /* CircularLoadingLabel.m */; };
+		BF2B04151FF4D700002743DA /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B04141FF4D700002743DA /* MenuCell.m */; };
+		BF2B04201FF4D7C9002743DA /* BikeStationListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B041D1FF4D7C9002743DA /* BikeStationListCollectionViewCell.m */; };
+		BF2B04211FF4D7C9002743DA /* BikeTypesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B041F1FF4D7C9002743DA /* BikeTypesCollectionViewCell.m */; };
+		BF2B04241FF61FC6002743DA /* LocationSearchTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B04231FF61FC6002743DA /* LocationSearchTVC.m */; };
+		BF2B04291FF61FE4002743DA /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B04261FF61FE4002743DA /* MainVC.m */; };
+		BF2B042A1FF61FE4002743DA /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B04281FF61FE4002743DA /* MapVC.m */; };
+		BF2B809C202C583D0080C671 /* SBStationListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B809B202C583D0080C671 /* SBStationListDataSource.m */; };
+		BF2B80A62030048E0080C671 /* SBNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B80A52030048E0080C671 /* SBNotificationCenter.m */; };
+		BF2B80AC203133C40080C671 /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B80AB203133C40080C671 /* UserDefaults.m */; };
+		BF42279E1FDD09EF0042E566 /* SBStationListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF42279D1FDD09EF0042E566 /* SBStationListVC.m */; };
+		BF4577951F8788BA00DC70F3 /* ToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4577941F8788BA00DC70F3 /* ToolBar.m */; };
+		BF4648DE1F910A9200F20AE0 /* RealmUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4648DD1F910A9200F20AE0 /* RealmUtil.m */; };
+		BF56C6D6200F514300221E72 /* UIBezierPath+JLBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56C6D5200F514300221E72 /* UIBezierPath+JLBezierPath.m */; };
 		BF5AE28C1F089E6200ED49E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5AE28B1F089E6200ED49E6 /* main.m */; };
 		BF5AE28F1F089E6200ED49E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5AE28E1F089E6200ED49E6 /* AppDelegate.m */; };
-		BF5AE2971F089E6200ED49E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE2961F089E6200ED49E6 /* Assets.xcassets */; };
 		BF5AE29A1F089E6200ED49E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE2981F089E6200ED49E6 /* LaunchScreen.storyboard */; };
 		BF5AE2A41F089EB400ED49E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5AE2A31F089EB400ED49E6 /* MapKit.framework */; };
-		BF902BA01F3B681A00639115 /* BikeMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = BF902B9F1F3B681A00639115 /* BikeMarkers.m */; };
-		BFF524651F09DF4500A0E1C6 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524641F09DF4500A0E1C6 /* MainVC.m */; };
-		BFF5246B1F09ED1D00A0E1C6 /* UIView+JLView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5246A1F09ED1D00A0E1C6 /* UIView+JLView.m */; };
-		BFF5246E1F09F3D600A0E1C6 /* NSString+JLString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5246D1F09F3D600A0E1C6 /* NSString+JLString.m */; };
-		BFF524711F09F3F500A0E1C6 /* UILabel+JLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524701F09F3F500A0E1C6 /* UILabel+JLLabel.m */; };
-		BFF524741F0A3DF200A0E1C6 /* SideMenuV.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524731F0A3DF200A0E1C6 /* SideMenuV.m */; };
-		BFF5247A1F0A4D7E00A0E1C6 /* SpinnerBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524791F0A4D7E00A0E1C6 /* SpinnerBtn.m */; };
-		BFF5247F1F0B194400A0E1C6 /* MapV.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5247E1F0B194400A0E1C6 /* MapV.m */; };
-		BFF524821F0B21DB00A0E1C6 /* UIColor+JLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524811F0B21DB00A0E1C6 /* UIColor+JLColor.m */; };
+		BF609BC31F7CED4400C73AB1 /* NSString+JLString.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609B8D1F7CED4400C73AB1 /* NSString+JLString.m */; };
+		BF609BC41F7CED4400C73AB1 /* UIColor+JLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609B911F7CED4400C73AB1 /* UIColor+JLColor.m */; };
+		BF609BC51F7CED4400C73AB1 /* UIImage+JLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609B931F7CED4400C73AB1 /* UIImage+JLImage.m */; };
+		BF609BC61F7CED4400C73AB1 /* UILabel+JLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609B951F7CED4400C73AB1 /* UILabel+JLLabel.m */; };
+		BF609BC71F7CED4400C73AB1 /* UIView+JLView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609B971F7CED4400C73AB1 /* UIView+JLView.m */; };
+		BF609BCF1F7CED4400C73AB1 /* ServerConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609BAE1F7CED4400C73AB1 /* ServerConnector.m */; };
+		BF609BD01F7CED4400C73AB1 /* BikeSmarNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609BB11F7CED4400C73AB1 /* BikeSmarNavigationView.m */; };
+		BF609BD41F7CED4400C73AB1 /* ContentNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609BBB1F7CED4400C73AB1 /* ContentNavigationBar.m */; };
+		BF609BE01F7E1E7A00C73AB1 /* NavigationButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609BDF1F7E1E7A00C73AB1 /* NavigationButtonFactory.m */; };
+		BF609BE31F7E1F5F00C73AB1 /* NavigationMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609BE21F7E1F5F00C73AB1 /* NavigationMenuButton.m */; };
+		BF609BE61F7E1F6F00C73AB1 /* NavigationSearchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609BE51F7E1F6F00C73AB1 /* NavigationSearchButton.m */; };
+		BF609BE91F7E1FB500C73AB1 /* NavigationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF609BE81F7E1FB500C73AB1 /* NavigationButton.m */; };
+		BF61C5391FF7EAD4009AF8BB /* LocationItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF61C5381FF7EAD4009AF8BB /* LocationItemCell.m */; };
+		BF6774E21FCA92D100FE6BA4 /* SBGrandMasterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6774E11FCA92D000FE6BA4 /* SBGrandMasterVC.m */; };
+		BF6774E51FCBBC2C00FE6BA4 /* JLSideMenuSlideInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6774E41FCBBC2C00FE6BA4 /* JLSideMenuSlideInVC.m */; };
+		BF7355A71FA9E773008E102B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE88C491F930E9100D27D52 /* Assets.xcassets */; };
+		BF7ACF8C1FC45B6500682132 /* SBNavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ACF8B1FC45B6500682132 /* SBNavigationTitleView.m */; };
+		BF7E5BB11F919B8400D20D09 /* BikeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E5BB01F919B8400D20D09 /* BikeMarker.m */; };
+		BF9602AF1FAB16D1003ADC2E /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9602AE1FAB16D1003ADC2E /* ImageUtil.m */; };
+		BF9602B21FAB273C003ADC2E /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9602B11FAB273C003ADC2E /* MenuVC.m */; };
+		BFA0593F1FE50A2F006257E7 /* SBGeneralMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0593E1FE50A2F006257E7 /* SBGeneralMainViewController.m */; };
+		BFB494DC200C606E007F18F8 /* BikeCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB494DB200C606E007F18F8 /* BikeCluster.m */; };
+		BFD7275B1FF13824005878FB /* BikeModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD7275A1FF13824005878FB /* BikeModelManager.m */; };
+		BFE88C481F926A9100D27D52 /* BikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE88C471F926A9100D27D52 /* BikeModel.m */; };
+		BFE88C501F949ED000D27D52 /* MileStoneMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE88C4F1F949ED000D27D52 /* MileStoneMarker.m */; };
+		BFE88C531F94A32A00D27D52 /* BikeMarkerIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE88C521F94A32A00D27D52 /* BikeMarkerIconView.m */; };
+		BFE88C591F972BF800D27D52 /* LaunchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE88C581F972BF800D27D52 /* LaunchVC.m */; };
+		BFE88C5B1F973F9700D27D52 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE88C5A1F973F9700D27D52 /* QuartzCore.framework */; };
+		BFEFA4E41FC574FD00DB5325 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEFA4E31FC574FD00DB5325 /* Constants.m */; };
+		BFF2FE921FC6934C003E3037 /* SBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2FE911FC6934C003E3037 /* SBNavigationController.m */; };
 		BFF524861F0BF1B700A0E1C6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF524851F0BF1B700A0E1C6 /* CoreLocation.framework */; };
-		BFF524891F0CEBC500A0E1C6 /* MapInfoBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524881F0CEBC500A0E1C6 /* MapInfoBtn.m */; };
-		BFF5248C1F10679D00A0E1C6 /* UIImage+JLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF5248B1F10679D00A0E1C6 /* UIImage+JLImage.m */; };
-		BFF524A21F13CE6900A0E1C6 /* MarkerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF524A11F13CE6900A0E1C6 /* MarkerVM.m */; };
+		BFFC8640202822EB007F5BB1 /* BikeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFC863F202822EB007F5BB1 /* BikeDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		303F29A4AA2420C69CAD3916 /* libPods-BikeSmart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BikeSmart.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E056A18B090AA75CEF8681B /* Pods-BikeSmart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSmart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart.debug.xcconfig"; sourceTree = "<group>"; };
+		BF010631201AB8360067C8FA /* SBBikeTypeCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBBikeTypeCVC.h; path = StationList/SBBikeTypeCVC.h; sourceTree = "<group>"; };
+		BF010632201AB8360067C8FA /* SBBikeTypeCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBBikeTypeCVC.m; path = StationList/SBBikeTypeCVC.m; sourceTree = "<group>"; };
+		BF010634201AB9910067C8FA /* TravelPlannerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelPlannerManager.h; sourceTree = "<group>"; };
+		BF010635201AB9910067C8FA /* TravelPlannerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelPlannerManager.m; sourceTree = "<group>"; };
+		BF010637201ABB130067C8FA /* MileStone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MileStone.h; sourceTree = "<group>"; };
+		BF010638201ABB130067C8FA /* MileStone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MileStone.m; sourceTree = "<group>"; };
+		BF01063B201ABE8E0067C8FA /* NSMutableArray+JLMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JLMutableArray.h"; sourceTree = "<group>"; };
+		BF01063C201ABE8E0067C8FA /* NSMutableArray+JLMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JLMutableArray.m"; sourceTree = "<group>"; };
+		BF04E3101FD0FBD10050B836 /* AttributeStringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributeStringUtil.h; path = Utility/AttributeStringUtil.h; sourceTree = "<group>"; };
+		BF04E3111FD0FBD10050B836 /* AttributeStringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributeStringUtil.m; path = Utility/AttributeStringUtil.m; sourceTree = "<group>"; };
+		BF04E3171FD12F5F0050B836 /* CaviarDreamsBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreamsBold.ttf; sourceTree = "<group>"; };
+		BF04E3181FD12F5F0050B836 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
+		BF04E3191FD12F5F0050B836 /* CaviarDreams_BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_BoldItalic.ttf; sourceTree = "<group>"; };
+		BF04E31A1FD12F5F0050B836 /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
+		BF04E31B1FD12F5F0050B836 /* readmenew.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readmenew.txt; sourceTree = "<group>"; };
+		BF04E3221FD132850050B836 /* UIFont+JLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+JLFont.h"; sourceTree = "<group>"; };
+		BF04E3231FD132850050B836 /* UIFont+JLFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+JLFont.m"; sourceTree = "<group>"; };
+		BF04E3251FD163030050B836 /* UIFontDescriptor+JLFontDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFontDescriptor+JLFontDescriptor.h"; sourceTree = "<group>"; };
+		BF04E3261FD163030050B836 /* UIFontDescriptor+JLFontDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFontDescriptor+JLFontDescriptor.m"; sourceTree = "<group>"; };
+		BF101B3D1FEE271B0015E3A0 /* BikeClustersManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeClustersManager.h; sourceTree = "<group>"; };
+		BF101B3E1FEE271B0015E3A0 /* BikeClustersManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeClustersManager.m; sourceTree = "<group>"; };
+		BF101B401FEEC2940015E3A0 /* BikeClusterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeClusterItem.h; sourceTree = "<group>"; };
+		BF101B411FEEC2940015E3A0 /* BikeClusterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeClusterItem.m; sourceTree = "<group>"; };
+		BF101B471FEF6A440015E3A0 /* BikeMarkerAvailableIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeMarkerAvailableIndicatorView.h; sourceTree = "<group>"; };
+		BF101B481FEF6A440015E3A0 /* BikeMarkerAvailableIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeMarkerAvailableIndicatorView.m; sourceTree = "<group>"; };
+		BF101B4A1FF0A1C20015E3A0 /* BikeClusterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeClusterRenderer.h; sourceTree = "<group>"; };
+		BF101B4B1FF0A1C20015E3A0 /* BikeClusterRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeClusterRenderer.m; sourceTree = "<group>"; };
+		BF139BFE1FB6F34F001DDA4D /* JLBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBarButtonItem.h; sourceTree = "<group>"; };
+		BF139BFF1FB6F350001DDA4D /* JLBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBarButtonItem.m; sourceTree = "<group>"; };
+		BF139C011FB7D7EA001DDA4D /* MessengerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessengerUtil.h; path = Utility/MessengerUtil.h; sourceTree = "<group>"; };
+		BF139C021FB7D7EA001DDA4D /* MessengerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessengerUtil.m; path = Utility/MessengerUtil.m; sourceTree = "<group>"; };
+		BF139C041FB7DBED001DDA4D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		BF139C051FB7DBED001DDA4D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		BF139C081FB89429001DDA4D /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingView.h; path = "Loading View/LoadingView.h"; sourceTree = "<group>"; };
+		BF139C091FB89429001DDA4D /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingView.m; path = "Loading View/LoadingView.m"; sourceTree = "<group>"; };
+		BF139C151FBA9F23001DDA4D /* TutorialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TutorialVC.h; path = "View Controller/TutorialVC.h"; sourceTree = "<group>"; };
+		BF139C161FBA9F23001DDA4D /* TutorialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TutorialVC.m; path = "View Controller/TutorialVC.m"; sourceTree = "<group>"; };
+		BF139C2B1FBE56D2001DDA4D /* Launch_IntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Launch_IntroView.h; path = Tutorial/Launch_IntroView.h; sourceTree = "<group>"; };
+		BF139C2C1FBE56D2001DDA4D /* Launch_IntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Launch_IntroView.m; path = Tutorial/Launch_IntroView.m; sourceTree = "<group>"; };
+		BF139C2E1FBE570D001DDA4D /* Launch_MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Launch_MenuView.h; path = "Tutorial View/Launch_MenuView.h"; sourceTree = "<group>"; };
+		BF139C2F1FBE570D001DDA4D /* Launch_MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Launch_MenuView.m; path = "Tutorial View/Launch_MenuView.m"; sourceTree = "<group>"; };
+		BF139C331FBFC7C9001DDA4D /* JLScrollMileStoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JLScrollMileStoneView.h; path = "Tutorial View/JLScrollMileStoneView.h"; sourceTree = "<group>"; };
+		BF139C341FBFC7C9001DDA4D /* JLScrollMileStoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLScrollMileStoneView.m; path = "Tutorial View/JLScrollMileStoneView.m"; sourceTree = "<group>"; };
+		BF139C361FBFCA32001DDA4D /* JLScrollMileStoneButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLScrollMileStoneButton.h; sourceTree = "<group>"; };
+		BF139C371FBFCA32001DDA4D /* JLScrollMileStoneButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLScrollMileStoneButton.m; sourceTree = "<group>"; };
+		BF139C391FC151B3001DDA4D /* JLPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPageViewController.h; sourceTree = "<group>"; };
+		BF139C3A1FC151B3001DDA4D /* JLPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPageViewController.m; sourceTree = "<group>"; };
+		BF1DD03C1F8BCE98009CD654 /* NavigationButtonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationButtonProtocol.h; sourceTree = "<group>"; };
+		BF1DD0491F8D2771009CD654 /* WeatherModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
+		BF1DD0521F8E0FF7009CD654 /* AdminAreaLocality.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AdminAreaLocality.json; sourceTree = "<group>"; };
+		BF1DD0571F8E10DB009CD654 /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherView.m; sourceTree = "<group>"; };
+		BF1DD0581F8E10DB009CD654 /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherView.h; sourceTree = "<group>"; };
+		BF1DD05A1F8E6B18009CD654 /* WeatherIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherIconView.h; sourceTree = "<group>"; };
+		BF1DD05B1F8E6B18009CD654 /* WeatherIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherIconView.m; sourceTree = "<group>"; };
+		BF1DD05F1F8F6EFB009CD654 /* WeatherRealm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherRealm.h; sourceTree = "<group>"; };
+		BF1DD0651F8FD01E009CD654 /* NSDictionary+NSDictionary_JLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NSDictionary_JLDictionary.h"; sourceTree = "<group>"; };
+		BF1DD0661F8FD01E009CD654 /* NSDictionary+NSDictionary_JLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NSDictionary_JLDictionary.m"; sourceTree = "<group>"; };
+		BF1DD0681F90A438009CD654 /* BikeRealm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BikeRealm.h; sourceTree = "<group>"; };
+		BF24936A1FFA31D7006F29F6 /* BikeClusterIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeClusterIconView.h; sourceTree = "<group>"; };
+		BF24936B1FFA31D7006F29F6 /* BikeClusterIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeClusterIconView.m; sourceTree = "<group>"; };
+		BF24936D1FFB6752006F29F6 /* BikePieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikePieChart.h; sourceTree = "<group>"; };
+		BF24936E1FFB6752006F29F6 /* BikePieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikePieChart.m; sourceTree = "<group>"; };
+		BF2688BB1FA1BD510088D522 /* FlipPresentAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipPresentAnimationController.h; path = "Controllers/Animation Controller/FlipPresentAnimationController.h"; sourceTree = "<group>"; };
+		BF2688BC1FA1BD510088D522 /* FlipPresentAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipPresentAnimationController.m; path = "Controllers/Animation Controller/FlipPresentAnimationController.m"; sourceTree = "<group>"; };
+		BF2688BE1FA1BD640088D522 /* FlipDismissAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipDismissAnimationController.h; path = "Controllers/Animation Controller/FlipDismissAnimationController.h"; sourceTree = "<group>"; };
+		BF2688BF1FA1BD640088D522 /* FlipDismissAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipDismissAnimationController.m; path = "Controllers/Animation Controller/FlipDismissAnimationController.m"; sourceTree = "<group>"; };
+		BF2688C11FA1C6870088D522 /* AnimationHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationHelper.h; sourceTree = "<group>"; };
+		BF2688C21FA1CC780088D522 /* AnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHelper.m; sourceTree = "<group>"; };
+		BF28B1341FA6DB7C00B81082 /* CircularLoadingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircularLoadingLabel.h; path = Labels/CircularLoadingLabel.h; sourceTree = "<group>"; };
+		BF28B1351FA6DB7C00B81082 /* CircularLoadingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircularLoadingLabel.m; path = Labels/CircularLoadingLabel.m; sourceTree = "<group>"; };
+		BF2B04131FF4D700002743DA /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuCell.h; path = Menus/MenuCell.h; sourceTree = "<group>"; };
+		BF2B04141FF4D700002743DA /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuCell.m; path = Menus/MenuCell.m; sourceTree = "<group>"; };
+		BF2B041C1FF4D7C9002743DA /* BikeStationListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BikeStationListCollectionViewCell.h; path = StationList/BikeStationListCollectionViewCell.h; sourceTree = "<group>"; };
+		BF2B041D1FF4D7C9002743DA /* BikeStationListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BikeStationListCollectionViewCell.m; path = StationList/BikeStationListCollectionViewCell.m; sourceTree = "<group>"; };
+		BF2B041E1FF4D7C9002743DA /* BikeTypesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BikeTypesCollectionViewCell.h; path = StationList/BikeTypesCollectionViewCell.h; sourceTree = "<group>"; };
+		BF2B041F1FF4D7C9002743DA /* BikeTypesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BikeTypesCollectionViewCell.m; path = StationList/BikeTypesCollectionViewCell.m; sourceTree = "<group>"; };
+		BF2B04221FF61FC6002743DA /* LocationSearchTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationSearchTVC.h; path = Map/LocationSearchTVC.h; sourceTree = "<group>"; };
+		BF2B04231FF61FC6002743DA /* LocationSearchTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationSearchTVC.m; path = Map/LocationSearchTVC.m; sourceTree = "<group>"; };
+		BF2B04251FF61FE4002743DA /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainVC.h; path = Map/MainVC.h; sourceTree = "<group>"; };
+		BF2B04261FF61FE4002743DA /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainVC.m; path = Map/MainVC.m; sourceTree = "<group>"; };
+		BF2B04271FF61FE4002743DA /* MapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapVC.h; path = Map/MapVC.h; sourceTree = "<group>"; };
+		BF2B04281FF61FE4002743DA /* MapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapVC.m; path = Map/MapVC.m; sourceTree = "<group>"; };
+		BF2B809A202C583D0080C671 /* SBStationListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBStationListDataSource.h; sourceTree = "<group>"; };
+		BF2B809B202C583D0080C671 /* SBStationListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBStationListDataSource.m; sourceTree = "<group>"; };
+		BF2B80A42030048E0080C671 /* SBNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBNotificationCenter.h; sourceTree = "<group>"; };
+		BF2B80A52030048E0080C671 /* SBNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBNotificationCenter.m; sourceTree = "<group>"; };
+		BF2B80AA203133C40080C671 /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
+		BF2B80AB203133C40080C671 /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
+		BF42279C1FDD09EF0042E566 /* SBStationListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBStationListVC.h; path = StationList/SBStationListVC.h; sourceTree = "<group>"; };
+		BF42279D1FDD09EF0042E566 /* SBStationListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBStationListVC.m; path = StationList/SBStationListVC.m; sourceTree = "<group>"; };
+		BF4577931F8788BA00DC70F3 /* ToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolBar.h; sourceTree = "<group>"; };
+		BF4577941F8788BA00DC70F3 /* ToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolBar.m; sourceTree = "<group>"; };
+		BF4648DC1F910A9200F20AE0 /* RealmUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RealmUtil.h; path = Factory/RealmUtil.h; sourceTree = "<group>"; };
+		BF4648DD1F910A9200F20AE0 /* RealmUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RealmUtil.m; path = Factory/RealmUtil.m; sourceTree = "<group>"; };
+		BF56C6D4200F514300221E72 /* UIBezierPath+JLBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+JLBezierPath.h"; sourceTree = "<group>"; };
+		BF56C6D5200F514300221E72 /* UIBezierPath+JLBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+JLBezierPath.m"; sourceTree = "<group>"; };
 		BF5AE2871F089E6200ED49E6 /* BikeSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5AE28B1F089E6200ED49E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF5AE28D1F089E6200ED49E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF5AE28E1F089E6200ED49E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BF5AE2961F089E6200ED49E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5AE2991F089E6200ED49E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5AE29B1F089E6200ED49E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5AE2A11F089E8800ED49E6 /* BikeSmart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BikeSmart.entitlements; sourceTree = "<group>"; };
 		BF5AE2A31F089EB400ED49E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		BF902B9E1F3B681A00639115 /* BikeMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeMarkers.h; sourceTree = "<group>"; };
-		BF902B9F1F3B681A00639115 /* BikeMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeMarkers.m; sourceTree = "<group>"; };
-		BFF524631F09DF4500A0E1C6 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
-		BFF524641F09DF4500A0E1C6 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
-		BFF524691F09ED1D00A0E1C6 /* UIView+JLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JLView.h"; sourceTree = "<group>"; };
-		BFF5246A1F09ED1D00A0E1C6 /* UIView+JLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JLView.m"; sourceTree = "<group>"; };
-		BFF5246C1F09F3D600A0E1C6 /* NSString+JLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JLString.h"; sourceTree = "<group>"; };
-		BFF5246D1F09F3D600A0E1C6 /* NSString+JLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JLString.m"; sourceTree = "<group>"; };
-		BFF5246F1F09F3F500A0E1C6 /* UILabel+JLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JLLabel.h"; sourceTree = "<group>"; };
-		BFF524701F09F3F500A0E1C6 /* UILabel+JLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JLLabel.m"; sourceTree = "<group>"; };
-		BFF524721F0A3DF200A0E1C6 /* SideMenuV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuV.h; sourceTree = "<group>"; };
-		BFF524731F0A3DF200A0E1C6 /* SideMenuV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuV.m; sourceTree = "<group>"; };
-		BFF524781F0A4D7E00A0E1C6 /* SpinnerBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinnerBtn.h; sourceTree = "<group>"; };
-		BFF524791F0A4D7E00A0E1C6 /* SpinnerBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinnerBtn.m; sourceTree = "<group>"; };
-		BFF5247D1F0B194400A0E1C6 /* MapV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapV.h; sourceTree = "<group>"; };
-		BFF5247E1F0B194400A0E1C6 /* MapV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapV.m; sourceTree = "<group>"; };
-		BFF524801F0B21DB00A0E1C6 /* UIColor+JLColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JLColor.h"; sourceTree = "<group>"; };
-		BFF524811F0B21DB00A0E1C6 /* UIColor+JLColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JLColor.m"; sourceTree = "<group>"; };
-		BFF524841F0B30DE00A0E1C6 /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
+		BF609B8C1F7CED4400C73AB1 /* NSString+JLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JLString.h"; sourceTree = "<group>"; };
+		BF609B8D1F7CED4400C73AB1 /* NSString+JLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JLString.m"; sourceTree = "<group>"; };
+		BF609B901F7CED4400C73AB1 /* UIColor+JLColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JLColor.h"; sourceTree = "<group>"; };
+		BF609B911F7CED4400C73AB1 /* UIColor+JLColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JLColor.m"; sourceTree = "<group>"; };
+		BF609B921F7CED4400C73AB1 /* UIImage+JLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JLImage.h"; sourceTree = "<group>"; };
+		BF609B931F7CED4400C73AB1 /* UIImage+JLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JLImage.m"; sourceTree = "<group>"; };
+		BF609B941F7CED4400C73AB1 /* UILabel+JLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JLLabel.h"; sourceTree = "<group>"; };
+		BF609B951F7CED4400C73AB1 /* UILabel+JLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JLLabel.m"; sourceTree = "<group>"; };
+		BF609B961F7CED4400C73AB1 /* UIView+JLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JLView.h"; sourceTree = "<group>"; };
+		BF609B971F7CED4400C73AB1 /* UIView+JLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JLView.m"; sourceTree = "<group>"; };
+		BF609B9A1F7CED4400C73AB1 /* BikeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeModel.h; sourceTree = "<group>"; };
+		BF609BAB1F7CED4400C73AB1 /* Definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
+		BF609BAD1F7CED4400C73AB1 /* ServerConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConnector.h; sourceTree = "<group>"; };
+		BF609BAE1F7CED4400C73AB1 /* ServerConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerConnector.m; sourceTree = "<group>"; };
+		BF609BB01F7CED4400C73AB1 /* BikeSmarNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeSmarNavigationView.h; sourceTree = "<group>"; };
+		BF609BB11F7CED4400C73AB1 /* BikeSmarNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeSmarNavigationView.m; sourceTree = "<group>"; };
+		BF609BBA1F7CED4400C73AB1 /* ContentNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentNavigationBar.h; sourceTree = "<group>"; };
+		BF609BBB1F7CED4400C73AB1 /* ContentNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentNavigationBar.m; sourceTree = "<group>"; };
+		BF609BDE1F7E1E7A00C73AB1 /* NavigationButtonFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationButtonFactory.h; sourceTree = "<group>"; };
+		BF609BDF1F7E1E7A00C73AB1 /* NavigationButtonFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationButtonFactory.m; sourceTree = "<group>"; };
+		BF609BE11F7E1F5F00C73AB1 /* NavigationMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMenuButton.h; sourceTree = "<group>"; };
+		BF609BE21F7E1F5F00C73AB1 /* NavigationMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMenuButton.m; sourceTree = "<group>"; };
+		BF609BE41F7E1F6F00C73AB1 /* NavigationSearchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationSearchButton.h; sourceTree = "<group>"; };
+		BF609BE51F7E1F6F00C73AB1 /* NavigationSearchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationSearchButton.m; sourceTree = "<group>"; };
+		BF609BE71F7E1FB500C73AB1 /* NavigationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationButton.h; sourceTree = "<group>"; };
+		BF609BE81F7E1FB500C73AB1 /* NavigationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationButton.m; sourceTree = "<group>"; };
+		BF61C5371FF7EAD4009AF8BB /* LocationItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationItemCell.h; sourceTree = "<group>"; };
+		BF61C5381FF7EAD4009AF8BB /* LocationItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationItemCell.m; sourceTree = "<group>"; };
+		BF6774E01FCA92D000FE6BA4 /* SBGrandMasterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBGrandMasterVC.h; sourceTree = "<group>"; };
+		BF6774E11FCA92D000FE6BA4 /* SBGrandMasterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBGrandMasterVC.m; sourceTree = "<group>"; };
+		BF6774E31FCBBC2C00FE6BA4 /* JLSideMenuSlideInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JLSideMenuSlideInVC.h; path = "JL FrameWork/JLSideMenuSlideInVC.h"; sourceTree = "<group>"; };
+		BF6774E41FCBBC2C00FE6BA4 /* JLSideMenuSlideInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLSideMenuSlideInVC.m; path = "JL FrameWork/JLSideMenuSlideInVC.m"; sourceTree = "<group>"; };
+		BF7ACF8A1FC45B6500682132 /* SBNavigationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBNavigationTitleView.h; sourceTree = "<group>"; };
+		BF7ACF8B1FC45B6500682132 /* SBNavigationTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBNavigationTitleView.m; sourceTree = "<group>"; };
+		BF7E5BAF1F919B8400D20D09 /* BikeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeMarker.h; sourceTree = "<group>"; };
+		BF7E5BB01F919B8400D20D09 /* BikeMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeMarker.m; sourceTree = "<group>"; };
+		BF9602AD1FAB16D1003ADC2E /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageUtil.h; path = Utility/ImageUtil.h; sourceTree = "<group>"; };
+		BF9602AE1FAB16D1003ADC2E /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageUtil.m; path = Utility/ImageUtil.m; sourceTree = "<group>"; };
+		BF9602B01FAB273C003ADC2E /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuVC.h; path = "View Controller/MenuVC.h"; sourceTree = "<group>"; };
+		BF9602B11FAB273C003ADC2E /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuVC.m; path = "View Controller/MenuVC.m"; sourceTree = "<group>"; };
+		BFA0593D1FE50A2F006257E7 /* SBGeneralMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBGeneralMainViewController.h; path = "General Controllers/SBGeneralMainViewController.h"; sourceTree = "<group>"; };
+		BFA0593E1FE50A2F006257E7 /* SBGeneralMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBGeneralMainViewController.m; path = "General Controllers/SBGeneralMainViewController.m"; sourceTree = "<group>"; };
+		BFB494DA200C606E007F18F8 /* BikeCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeCluster.h; sourceTree = "<group>"; };
+		BFB494DB200C606E007F18F8 /* BikeCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeCluster.m; sourceTree = "<group>"; };
+		BFD727591FF13824005878FB /* BikeModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeModelManager.h; sourceTree = "<group>"; };
+		BFD7275A1FF13824005878FB /* BikeModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeModelManager.m; sourceTree = "<group>"; };
+		BFE88C471F926A9100D27D52 /* BikeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeModel.m; sourceTree = "<group>"; };
+		BFE88C491F930E9100D27D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFE88C4E1F949ED000D27D52 /* MileStoneMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MileStoneMarker.h; sourceTree = "<group>"; };
+		BFE88C4F1F949ED000D27D52 /* MileStoneMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MileStoneMarker.m; sourceTree = "<group>"; };
+		BFE88C511F94A32A00D27D52 /* BikeMarkerIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeMarkerIconView.h; sourceTree = "<group>"; };
+		BFE88C521F94A32A00D27D52 /* BikeMarkerIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeMarkerIconView.m; sourceTree = "<group>"; };
+		BFE88C571F972BF800D27D52 /* LaunchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchVC.h; sourceTree = "<group>"; };
+		BFE88C581F972BF800D27D52 /* LaunchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchVC.m; sourceTree = "<group>"; };
+		BFE88C5A1F973F9700D27D52 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BFEFA4E21FC574FD00DB5325 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BFEFA4E31FC574FD00DB5325 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		BFF2FE901FC6934C003E3037 /* SBNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SBNavigationController.h; path = NavigationController/SBNavigationController.h; sourceTree = "<group>"; };
+		BFF2FE911FC6934C003E3037 /* SBNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SBNavigationController.m; path = NavigationController/SBNavigationController.m; sourceTree = "<group>"; };
 		BFF524851F0BF1B700A0E1C6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		BFF524871F0CEBC500A0E1C6 /* MapInfoBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInfoBtn.h; sourceTree = "<group>"; };
-		BFF524881F0CEBC500A0E1C6 /* MapInfoBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInfoBtn.m; sourceTree = "<group>"; };
-		BFF5248A1F10679D00A0E1C6 /* UIImage+JLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JLImage.h"; sourceTree = "<group>"; };
-		BFF5248B1F10679D00A0E1C6 /* UIImage+JLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JLImage.m"; sourceTree = "<group>"; };
-		BFF524A01F13CE6900A0E1C6 /* MarkerVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerVM.h; sourceTree = "<group>"; };
-		BFF524A11F13CE6900A0E1C6 /* MarkerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerVM.m; sourceTree = "<group>"; };
+		BFFC863E202822EB007F5BB1 /* BikeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeDataSource.h; sourceTree = "<group>"; };
+		BFFC863F202822EB007F5BB1 /* BikeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeDataSource.m; sourceTree = "<group>"; };
 		E00F17468595B99CE5780BEA /* Pods-BikeSmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeSmart.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeSmart/Pods-BikeSmart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE88C5B1F973F9700D27D52 /* QuartzCore.framework in Frameworks */,
 				BFF524861F0BF1B700A0E1C6 /* CoreLocation.framework in Frameworks */,
 				BF5AE2A41F089EB400ED49E6 /* MapKit.framework in Frameworks */,
 				0880BD37676D24CCC899A254 /* libPods-BikeSmart.a in Frameworks */,
@@ -90,6 +289,157 @@
 				E00F17468595B99CE5780BEA /* Pods-BikeSmart.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF04E3161FD12F5F0050B836 /* caviar-dreams */ = {
+			isa = PBXGroup;
+			children = (
+				BF04E3171FD12F5F0050B836 /* CaviarDreamsBold.ttf */,
+				BF04E3181FD12F5F0050B836 /* CaviarDreams.ttf */,
+				BF04E3191FD12F5F0050B836 /* CaviarDreams_BoldItalic.ttf */,
+				BF04E31A1FD12F5F0050B836 /* CaviarDreams_Italic.ttf */,
+				BF04E31B1FD12F5F0050B836 /* readmenew.txt */,
+			);
+			path = "caviar-dreams";
+			sourceTree = "<group>";
+		};
+		BF04E3211FD12F650050B836 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				BF04E3161FD12F5F0050B836 /* caviar-dreams */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		BF139C071FB893F7001DDA4D /* Loading View */ = {
+			isa = PBXGroup;
+			children = (
+				BF139C081FB89429001DDA4D /* LoadingView.h */,
+				BF139C091FB89429001DDA4D /* LoadingView.m */,
+			);
+			name = "Loading View";
+			sourceTree = "<group>";
+		};
+		BF139C101FB94DA4001DDA4D /* Tutorial View */ = {
+			isa = PBXGroup;
+			children = (
+				BF139C2B1FBE56D2001DDA4D /* Launch_IntroView.h */,
+				BF139C2C1FBE56D2001DDA4D /* Launch_IntroView.m */,
+				BF139C2E1FBE570D001DDA4D /* Launch_MenuView.h */,
+				BF139C2F1FBE570D001DDA4D /* Launch_MenuView.m */,
+				BF139C331FBFC7C9001DDA4D /* JLScrollMileStoneView.h */,
+				BF139C341FBFC7C9001DDA4D /* JLScrollMileStoneView.m */,
+			);
+			name = "Tutorial View";
+			sourceTree = "<group>";
+		};
+		BF139C181FBA9F2E001DDA4D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BFA0593C1FE50A08006257E7 /* General Controllers */,
+				BF7CEFBE1FCFDEA9005F387E /* StationList */,
+				BF139C421FC2D003001DDA4D /* Launch */,
+				BF139C411FC2CFE6001DDA4D /* Menu */,
+				BF139C401FC2CFDA001DDA4D /* Map */,
+				BF139C391FC151B3001DDA4D /* JLPageViewController.h */,
+				BF139C3A1FC151B3001DDA4D /* JLPageViewController.m */,
+				BFF2FE901FC6934C003E3037 /* SBNavigationController.h */,
+				BFF2FE911FC6934C003E3037 /* SBNavigationController.m */,
+				BF6774E01FCA92D000FE6BA4 /* SBGrandMasterVC.h */,
+				BF6774E11FCA92D000FE6BA4 /* SBGrandMasterVC.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		BF139C3C1FC1DDBE001DDA4D /* JL FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				BF6774E31FCBBC2C00FE6BA4 /* JLSideMenuSlideInVC.h */,
+				BF6774E41FCBBC2C00FE6BA4 /* JLSideMenuSlideInVC.m */,
+			);
+			name = "JL FrameWork";
+			sourceTree = "<group>";
+		};
+		BF139C401FC2CFDA001DDA4D /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BF2B04251FF61FE4002743DA /* MainVC.h */,
+				BF2B04261FF61FE4002743DA /* MainVC.m */,
+				BF2B04271FF61FE4002743DA /* MapVC.h */,
+				BF2B04281FF61FE4002743DA /* MapVC.m */,
+				BF2B04221FF61FC6002743DA /* LocationSearchTVC.h */,
+				BF2B04231FF61FC6002743DA /* LocationSearchTVC.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		BF139C411FC2CFE6001DDA4D /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BF9602B01FAB273C003ADC2E /* MenuVC.h */,
+				BF9602B11FAB273C003ADC2E /* MenuVC.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		BF139C421FC2D003001DDA4D /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				BFE88C571F972BF800D27D52 /* LaunchVC.h */,
+				BFE88C581F972BF800D27D52 /* LaunchVC.m */,
+				BF139C151FBA9F23001DDA4D /* TutorialVC.h */,
+				BF139C161FBA9F23001DDA4D /* TutorialVC.m */,
+			);
+			name = Launch;
+			sourceTree = "<group>";
+		};
+		BF1DD0511F8E0FF7009CD654 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF1DD0521F8E0FF7009CD654 /* AdminAreaLocality.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF2688BA1FA1BC950088D522 /* Animation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF2688BB1FA1BD510088D522 /* FlipPresentAnimationController.h */,
+				BF2688BC1FA1BD510088D522 /* FlipPresentAnimationController.m */,
+				BF2688BE1FA1BD640088D522 /* FlipDismissAnimationController.h */,
+				BF2688BF1FA1BD640088D522 /* FlipDismissAnimationController.m */,
+			);
+			name = "Animation Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		BF28B1301FA6DB4000B81082 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				BF28B1341FA6DB7C00B81082 /* CircularLoadingLabel.h */,
+				BF28B1351FA6DB7C00B81082 /* CircularLoadingLabel.m */,
+			);
+			name = Labels;
+			sourceTree = "<group>";
+		};
+		BF2B04081FF4D658002743DA /* StationList */ = {
+			isa = PBXGroup;
+			children = (
+				BF2B041C1FF4D7C9002743DA /* BikeStationListCollectionViewCell.h */,
+				BF2B041D1FF4D7C9002743DA /* BikeStationListCollectionViewCell.m */,
+				BF2B041E1FF4D7C9002743DA /* BikeTypesCollectionViewCell.h */,
+				BF2B041F1FF4D7C9002743DA /* BikeTypesCollectionViewCell.m */,
+			);
+			name = StationList;
+			sourceTree = "<group>";
+		};
+		BF2B040F1FF4D6AF002743DA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BF2B04131FF4D700002743DA /* MenuCell.h */,
+				BF2B04141FF4D700002743DA /* MenuCell.m */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		BF5AE27E1F089E6200ED49E6 = {
@@ -113,19 +463,12 @@
 		BF5AE2891F089E6200ED49E6 /* BikeSmart */ = {
 			isa = PBXGroup;
 			children = (
-				BFF524831F0B30C700A0E1C6 /* Definition */,
-				BFF5247B1F0A4D8700A0E1C6 /* Customized */,
-				BF5AE2A91F08D63800ED49E6 /* Singleton */,
-				BF5AE2A81F08D62200ED49E6 /* ViewModel */,
-				BF5AE2A71F08D61C00ED49E6 /* Model */,
-				BF5AE2A61F08D61700ED49E6 /* View */,
-				BF5AE2A51F08D61000ED49E6 /* Extensions */,
-				BF5AE2A11F089E8800ED49E6 /* BikeSmart.entitlements */,
-				BF5AE28D1F089E6200ED49E6 /* AppDelegate.h */,
-				BF5AE28E1F089E6200ED49E6 /* AppDelegate.m */,
-				BF5AE2961F089E6200ED49E6 /* Assets.xcassets */,
-				BF5AE2981F089E6200ED49E6 /* LaunchScreen.storyboard */,
-				BF5AE29B1F089E6200ED49E6 /* Info.plist */,
+				BF609B981F7CED4400C73AB1 /* Models */,
+				BF609BAF1F7CED4400C73AB1 /* Views */,
+				BF609B881F7CED4400C73AB1 /* Controllers */,
+				BF609B8B1F7CED4400C73AB1 /* Extensions */,
+				BF609BA81F7CED4400C73AB1 /* Others */,
+				BF1DD0511F8E0FF7009CD654 /* Resources */,
 				BF5AE28A1F089E6200ED49E6 /* Supporting Files */,
 			);
 			path = BikeSmart;
@@ -134,6 +477,13 @@
 		BF5AE28A1F089E6200ED49E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BF04E3211FD12F650050B836 /* Font */,
+				BFE88C491F930E9100D27D52 /* Assets.xcassets */,
+				BF5AE2A11F089E8800ED49E6 /* BikeSmart.entitlements */,
+				BF5AE28D1F089E6200ED49E6 /* AppDelegate.h */,
+				BF5AE28E1F089E6200ED49E6 /* AppDelegate.m */,
+				BF5AE2981F089E6200ED49E6 /* LaunchScreen.storyboard */,
+				BF5AE29B1F089E6200ED49E6 /* Info.plist */,
 				BF5AE28B1F089E6200ED49E6 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -142,6 +492,7 @@
 		BF5AE2A21F089EB400ED49E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFE88C5A1F973F9700D27D52 /* QuartzCore.framework */,
 				BFF524851F0BF1B700A0E1C6 /* CoreLocation.framework */,
 				BF5AE2A31F089EB400ED49E6 /* MapKit.framework */,
 				303F29A4AA2420C69CAD3916 /* libPods-BikeSmart.a */,
@@ -149,86 +500,242 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF5AE2A51F08D61000ED49E6 /* Extensions */ = {
+		BF609B881F7CED4400C73AB1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BFF524691F09ED1D00A0E1C6 /* UIView+JLView.h */,
-				BFF5246A1F09ED1D00A0E1C6 /* UIView+JLView.m */,
-				BFF5246C1F09F3D600A0E1C6 /* NSString+JLString.h */,
-				BFF5246D1F09F3D600A0E1C6 /* NSString+JLString.m */,
-				BFF5246F1F09F3F500A0E1C6 /* UILabel+JLLabel.h */,
-				BFF524701F09F3F500A0E1C6 /* UILabel+JLLabel.m */,
-				BFF524801F0B21DB00A0E1C6 /* UIColor+JLColor.h */,
-				BFF524811F0B21DB00A0E1C6 /* UIColor+JLColor.m */,
-				BFF5248A1F10679D00A0E1C6 /* UIImage+JLImage.h */,
-				BFF5248B1F10679D00A0E1C6 /* UIImage+JLImage.m */,
+				BF139C181FBA9F2E001DDA4D /* ViewController */,
+				BF2688BA1FA1BC950088D522 /* Animation Controller */,
 			);
-			name = Extensions;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		BF5AE2A61F08D61700ED49E6 /* View */ = {
+		BF609B8B1F7CED4400C73AB1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BFF524631F09DF4500A0E1C6 /* MainVC.h */,
-				BFF524641F09DF4500A0E1C6 /* MainVC.m */,
-				BFF524721F0A3DF200A0E1C6 /* SideMenuV.h */,
-				BFF524731F0A3DF200A0E1C6 /* SideMenuV.m */,
-				BFF5247D1F0B194400A0E1C6 /* MapV.h */,
-				BFF5247E1F0B194400A0E1C6 /* MapV.m */,
+				BF609B8C1F7CED4400C73AB1 /* NSString+JLString.h */,
+				BF609B8D1F7CED4400C73AB1 /* NSString+JLString.m */,
+				BF609B901F7CED4400C73AB1 /* UIColor+JLColor.h */,
+				BF609B911F7CED4400C73AB1 /* UIColor+JLColor.m */,
+				BF609B921F7CED4400C73AB1 /* UIImage+JLImage.h */,
+				BF609B931F7CED4400C73AB1 /* UIImage+JLImage.m */,
+				BF609B941F7CED4400C73AB1 /* UILabel+JLLabel.h */,
+				BF609B951F7CED4400C73AB1 /* UILabel+JLLabel.m */,
+				BF609B961F7CED4400C73AB1 /* UIView+JLView.h */,
+				BF609B971F7CED4400C73AB1 /* UIView+JLView.m */,
+				BF1DD0651F8FD01E009CD654 /* NSDictionary+NSDictionary_JLDictionary.h */,
+				BF1DD0661F8FD01E009CD654 /* NSDictionary+NSDictionary_JLDictionary.m */,
+				BF04E3221FD132850050B836 /* UIFont+JLFont.h */,
+				BF04E3231FD132850050B836 /* UIFont+JLFont.m */,
+				BF04E3251FD163030050B836 /* UIFontDescriptor+JLFontDescriptor.h */,
+				BF04E3261FD163030050B836 /* UIFontDescriptor+JLFontDescriptor.m */,
+				BF56C6D4200F514300221E72 /* UIBezierPath+JLBezierPath.h */,
+				BF56C6D5200F514300221E72 /* UIBezierPath+JLBezierPath.m */,
+				BF01063B201ABE8E0067C8FA /* NSMutableArray+JLMutableArray.h */,
+				BF01063C201ABE8E0067C8FA /* NSMutableArray+JLMutableArray.m */,
 			);
-			name = View;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		BF5AE2A71F08D61C00ED49E6 /* Model */ = {
+		BF609B981F7CED4400C73AB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BFF524961F13876400A0E1C6 /* GMSMarkers */,
+				BF609B991F7CED4400C73AB1 /* BikeMarkers */,
+				BF1DD0491F8D2771009CD654 /* WeatherModel.h */,
+				BF2B80AA203133C40080C671 /* UserDefaults.h */,
+				BF2B80AB203133C40080C671 /* UserDefaults.m */,
 			);
-			name = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		BF5AE2A81F08D62200ED49E6 /* ViewModel */ = {
+		BF609B991F7CED4400C73AB1 /* BikeMarkers */ = {
 			isa = PBXGroup;
 			children = (
-				BFF524A01F13CE6900A0E1C6 /* MarkerVM.h */,
-				BFF524A11F13CE6900A0E1C6 /* MarkerVM.m */,
+				BF609B9A1F7CED4400C73AB1 /* BikeModel.h */,
+				BFE88C471F926A9100D27D52 /* BikeModel.m */,
+				BF7E5BAF1F919B8400D20D09 /* BikeMarker.h */,
+				BF7E5BB01F919B8400D20D09 /* BikeMarker.m */,
+				BFE88C4E1F949ED000D27D52 /* MileStoneMarker.h */,
+				BFE88C4F1F949ED000D27D52 /* MileStoneMarker.m */,
+				BF101B3D1FEE271B0015E3A0 /* BikeClustersManager.h */,
+				BF101B3E1FEE271B0015E3A0 /* BikeClustersManager.m */,
+				BF101B401FEEC2940015E3A0 /* BikeClusterItem.h */,
+				BF101B411FEEC2940015E3A0 /* BikeClusterItem.m */,
+				BF101B471FEF6A440015E3A0 /* BikeMarkerAvailableIndicatorView.h */,
+				BF101B481FEF6A440015E3A0 /* BikeMarkerAvailableIndicatorView.m */,
+				BF101B4A1FF0A1C20015E3A0 /* BikeClusterRenderer.h */,
+				BF101B4B1FF0A1C20015E3A0 /* BikeClusterRenderer.m */,
+				BFB494DA200C606E007F18F8 /* BikeCluster.h */,
+				BFB494DB200C606E007F18F8 /* BikeCluster.m */,
 			);
-			name = ViewModel;
+			path = BikeMarkers;
 			sourceTree = "<group>";
 		};
-		BF5AE2A91F08D63800ED49E6 /* Singleton */ = {
+		BF609BA81F7CED4400C73AB1 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				BF139C3C1FC1DDBE001DDA4D /* JL FrameWork */,
+				BF9602A91FAB15FE003ADC2E /* Utility */,
+				BF609BDB1F7E1E1800C73AB1 /* Factory */,
+				BF609BA91F7CED4400C73AB1 /* Class */,
+				BF609BAA1F7CED4400C73AB1 /* Definition */,
+				BF609BAC1F7CED4400C73AB1 /* Singleton */,
 			);
-			name = Singleton;
+			path = Others;
 			sourceTree = "<group>";
 		};
-		BFF5247B1F0A4D8700A0E1C6 /* Customized */ = {
+		BF609BA91F7CED4400C73AB1 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				BFF524781F0A4D7E00A0E1C6 /* SpinnerBtn.h */,
-				BFF524791F0A4D7E00A0E1C6 /* SpinnerBtn.m */,
-				BFF524871F0CEBC500A0E1C6 /* MapInfoBtn.h */,
-				BFF524881F0CEBC500A0E1C6 /* MapInfoBtn.m */,
+				BF139C041FB7DBED001DDA4D /* Reachability.h */,
+				BF139C051FB7DBED001DDA4D /* Reachability.m */,
+				BF1DD05F1F8F6EFB009CD654 /* WeatherRealm.h */,
+				BF1DD0681F90A438009CD654 /* BikeRealm.h */,
+				BF2688C11FA1C6870088D522 /* AnimationHelper.h */,
+				BF2688C21FA1CC780088D522 /* AnimationHelper.m */,
+				BFEFA4E21FC574FD00DB5325 /* Constants.h */,
+				BFEFA4E31FC574FD00DB5325 /* Constants.m */,
+				BF010637201ABB130067C8FA /* MileStone.h */,
+				BF010638201ABB130067C8FA /* MileStone.m */,
+				BFFC863E202822EB007F5BB1 /* BikeDataSource.h */,
+				BFFC863F202822EB007F5BB1 /* BikeDataSource.m */,
+				BF2B809A202C583D0080C671 /* SBStationListDataSource.h */,
+				BF2B809B202C583D0080C671 /* SBStationListDataSource.m */,
+				BF2B80A42030048E0080C671 /* SBNotificationCenter.h */,
+				BF2B80A52030048E0080C671 /* SBNotificationCenter.m */,
 			);
-			name = Customized;
+			path = Class;
 			sourceTree = "<group>";
 		};
-		BFF524831F0B30C700A0E1C6 /* Definition */ = {
+		BF609BAA1F7CED4400C73AB1 /* Definition */ = {
 			isa = PBXGroup;
 			children = (
-				BFF524841F0B30DE00A0E1C6 /* Definitions.h */,
+				BF609BAB1F7CED4400C73AB1 /* Definitions.h */,
 			);
-			name = Definition;
+			path = Definition;
 			sourceTree = "<group>";
 		};
-		BFF524961F13876400A0E1C6 /* GMSMarkers */ = {
+		BF609BAC1F7CED4400C73AB1 /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
-				BF902B9E1F3B681A00639115 /* BikeMarkers.h */,
-				BF902B9F1F3B681A00639115 /* BikeMarkers.m */,
+				BF609BAD1F7CED4400C73AB1 /* ServerConnector.h */,
+				BF609BAE1F7CED4400C73AB1 /* ServerConnector.m */,
+				BFD727591FF13824005878FB /* BikeModelManager.h */,
+				BFD7275A1FF13824005878FB /* BikeModelManager.m */,
+				BF010634201AB9910067C8FA /* TravelPlannerManager.h */,
+				BF010635201AB9910067C8FA /* TravelPlannerManager.m */,
 			);
-			name = GMSMarkers;
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		BF609BAF1F7CED4400C73AB1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF2B040F1FF4D6AF002743DA /* Menu */,
+				BF2B04081FF4D658002743DA /* StationList */,
+				BF139C101FB94DA4001DDA4D /* Tutorial View */,
+				BF139C071FB893F7001DDA4D /* Loading View */,
+				BF28B1301FA6DB4000B81082 /* Labels */,
+				BF1DD0581F8E10DB009CD654 /* WeatherView.h */,
+				BF1DD0571F8E10DB009CD654 /* WeatherView.m */,
+				BF609BD81F7E1CF100C73AB1 /* Buttons */,
+				BF609BB21F7CED4400C73AB1 /* Map */,
+				BF609BB91F7CED4400C73AB1 /* NavigationBar */,
+				BF609BB01F7CED4400C73AB1 /* BikeSmarNavigationView.h */,
+				BF609BB11F7CED4400C73AB1 /* BikeSmarNavigationView.m */,
+				BF1DD05A1F8E6B18009CD654 /* WeatherIconView.h */,
+				BF1DD05B1F8E6B18009CD654 /* WeatherIconView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF609BB21F7CED4400C73AB1 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BFE88C511F94A32A00D27D52 /* BikeMarkerIconView.h */,
+				BFE88C521F94A32A00D27D52 /* BikeMarkerIconView.m */,
+				BF61C5371FF7EAD4009AF8BB /* LocationItemCell.h */,
+				BF61C5381FF7EAD4009AF8BB /* LocationItemCell.m */,
+				BF24936A1FFA31D7006F29F6 /* BikeClusterIconView.h */,
+				BF24936B1FFA31D7006F29F6 /* BikeClusterIconView.m */,
+				BF24936D1FFB6752006F29F6 /* BikePieChart.h */,
+				BF24936E1FFB6752006F29F6 /* BikePieChart.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		BF609BB91F7CED4400C73AB1 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				BF609BBA1F7CED4400C73AB1 /* ContentNavigationBar.h */,
+				BF609BBB1F7CED4400C73AB1 /* ContentNavigationBar.m */,
+				BF4577931F8788BA00DC70F3 /* ToolBar.h */,
+				BF4577941F8788BA00DC70F3 /* ToolBar.m */,
+				BF139BFE1FB6F34F001DDA4D /* JLBarButtonItem.h */,
+				BF139BFF1FB6F350001DDA4D /* JLBarButtonItem.m */,
+				BF7ACF8A1FC45B6500682132 /* SBNavigationTitleView.h */,
+				BF7ACF8B1FC45B6500682132 /* SBNavigationTitleView.m */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		BF609BD81F7E1CF100C73AB1 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				BF139C361FBFCA32001DDA4D /* JLScrollMileStoneButton.h */,
+				BF139C371FBFCA32001DDA4D /* JLScrollMileStoneButton.m */,
+				BF609BE11F7E1F5F00C73AB1 /* NavigationMenuButton.h */,
+				BF609BE21F7E1F5F00C73AB1 /* NavigationMenuButton.m */,
+				BF609BE41F7E1F6F00C73AB1 /* NavigationSearchButton.h */,
+				BF609BE51F7E1F6F00C73AB1 /* NavigationSearchButton.m */,
+				BF609BE71F7E1FB500C73AB1 /* NavigationButton.h */,
+				BF609BE81F7E1FB500C73AB1 /* NavigationButton.m */,
+				BF1DD03C1F8BCE98009CD654 /* NavigationButtonProtocol.h */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		BF609BDB1F7E1E1800C73AB1 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				BF609BDE1F7E1E7A00C73AB1 /* NavigationButtonFactory.h */,
+				BF609BDF1F7E1E7A00C73AB1 /* NavigationButtonFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		BF7CEFBE1FCFDEA9005F387E /* StationList */ = {
+			isa = PBXGroup;
+			children = (
+				BF42279C1FDD09EF0042E566 /* SBStationListVC.h */,
+				BF42279D1FDD09EF0042E566 /* SBStationListVC.m */,
+				BF010631201AB8360067C8FA /* SBBikeTypeCVC.h */,
+				BF010632201AB8360067C8FA /* SBBikeTypeCVC.m */,
+			);
+			name = StationList;
+			sourceTree = "<group>";
+		};
+		BF9602A91FAB15FE003ADC2E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BF4648DC1F910A9200F20AE0 /* RealmUtil.h */,
+				BF4648DD1F910A9200F20AE0 /* RealmUtil.m */,
+				BF9602AD1FAB16D1003ADC2E /* ImageUtil.h */,
+				BF9602AE1FAB16D1003ADC2E /* ImageUtil.m */,
+				BF139C011FB7D7EA001DDA4D /* MessengerUtil.h */,
+				BF139C021FB7D7EA001DDA4D /* MessengerUtil.m */,
+				BF04E3101FD0FBD10050B836 /* AttributeStringUtil.h */,
+				BF04E3111FD0FBD10050B836 /* AttributeStringUtil.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		BFA0593C1FE50A08006257E7 /* General Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFA0593D1FE50A2F006257E7 /* SBGeneralMainViewController.h */,
+				BFA0593E1FE50A2F006257E7 /* SBGeneralMainViewController.m */,
+			);
+			name = "General Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +767,7 @@
 		BF5AE27F1F089E6200ED49E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Jimmy;
 				TargetAttributes = {
 					BF5AE2861F089E6200ED49E6 = {
@@ -304,8 +811,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7355A71FA9E773008E102B /* Assets.xcassets in Resources */,
+				BF1DD0531F8E0FF7009CD654 /* AdminAreaLocality.json in Resources */,
+				BF04E31D1FD12F5F0050B836 /* CaviarDreams.ttf in Resources */,
+				BF06ECBE1FE7942F0092BC82 /* CaviarDreamsBold.ttf in Resources */,
+				BF06ECBC1FE794250092BC82 /* CaviarDreams_BoldItalic.ttf in Resources */,
+				BF06ECBD1FE794250092BC82 /* CaviarDreams_Italic.ttf in Resources */,
+				BF04E3201FD12F5F0050B836 /* readmenew.txt in Resources */,
 				BF5AE29A1F089E6200ED49E6 /* LaunchScreen.storyboard in Resources */,
-				BF5AE2971F089E6200ED49E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,20 +877,80 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF902BA01F3B681A00639115 /* BikeMarkers.m in Sources */,
-				BFF524651F09DF4500A0E1C6 /* MainVC.m in Sources */,
-				BFF5246E1F09F3D600A0E1C6 /* NSString+JLString.m in Sources */,
-				BFF524A21F13CE6900A0E1C6 /* MarkerVM.m in Sources */,
+				BF010639201ABB130067C8FA /* MileStone.m in Sources */,
+				BF609BE01F7E1E7A00C73AB1 /* NavigationButtonFactory.m in Sources */,
+				BF2B809C202C583D0080C671 /* SBStationListDataSource.m in Sources */,
+				BF139C3B1FC151B3001DDA4D /* JLPageViewController.m in Sources */,
+				BFD7275B1FF13824005878FB /* BikeModelManager.m in Sources */,
+				BF139C301FBE570D001DDA4D /* Launch_MenuView.m in Sources */,
+				BF1DD0591F8E10DB009CD654 /* WeatherView.m in Sources */,
+				BF101B491FEF6A450015E3A0 /* BikeMarkerAvailableIndicatorView.m in Sources */,
+				BF42279E1FDD09EF0042E566 /* SBStationListVC.m in Sources */,
+				BF56C6D6200F514300221E72 /* UIBezierPath+JLBezierPath.m in Sources */,
+				BF101B3F1FEE271B0015E3A0 /* BikeClustersManager.m in Sources */,
+				BF139C171FBA9F23001DDA4D /* TutorialVC.m in Sources */,
+				BF4648DE1F910A9200F20AE0 /* RealmUtil.m in Sources */,
+				BF04E3241FD132850050B836 /* UIFont+JLFont.m in Sources */,
+				BF2B04241FF61FC6002743DA /* LocationSearchTVC.m in Sources */,
+				BF4577951F8788BA00DC70F3 /* ToolBar.m in Sources */,
+				BF2B042A1FF61FE4002743DA /* MapVC.m in Sources */,
+				BF04E3121FD0FBD10050B836 /* AttributeStringUtil.m in Sources */,
+				BF2B04151FF4D700002743DA /* MenuCell.m in Sources */,
+				BF139C2D1FBE56D2001DDA4D /* Launch_IntroView.m in Sources */,
+				BF101B4C1FF0A1C20015E3A0 /* BikeClusterRenderer.m in Sources */,
 				BF5AE28F1F089E6200ED49E6 /* AppDelegate.m in Sources */,
-				BFF524741F0A3DF200A0E1C6 /* SideMenuV.m in Sources */,
-				BFF5247A1F0A4D7E00A0E1C6 /* SpinnerBtn.m in Sources */,
-				BFF5248C1F10679D00A0E1C6 /* UIImage+JLImage.m in Sources */,
-				BFF5247F1F0B194400A0E1C6 /* MapV.m in Sources */,
+				BFE88C501F949ED000D27D52 /* MileStoneMarker.m in Sources */,
+				BFF2FE921FC6934C003E3037 /* SBNavigationController.m in Sources */,
+				BF609BC31F7CED4400C73AB1 /* NSString+JLString.m in Sources */,
+				BF6774E51FCBBC2C00FE6BA4 /* JLSideMenuSlideInVC.m in Sources */,
+				BFE88C591F972BF800D27D52 /* LaunchVC.m in Sources */,
+				BF7ACF8C1FC45B6500682132 /* SBNavigationTitleView.m in Sources */,
+				BF139C031FB7D7EA001DDA4D /* MessengerUtil.m in Sources */,
+				BF2B04291FF61FE4002743DA /* MainVC.m in Sources */,
+				BF9602B21FAB273C003ADC2E /* MenuVC.m in Sources */,
+				BF1DD0671F8FD01F009CD654 /* NSDictionary+NSDictionary_JLDictionary.m in Sources */,
+				BF139C001FB6F350001DDA4D /* JLBarButtonItem.m in Sources */,
+				BF609BD41F7CED4400C73AB1 /* ContentNavigationBar.m in Sources */,
+				BF2688C01FA1BD640088D522 /* FlipDismissAnimationController.m in Sources */,
+				BF609BC41F7CED4400C73AB1 /* UIColor+JLColor.m in Sources */,
+				BF2688BD1FA1BD510088D522 /* FlipPresentAnimationController.m in Sources */,
+				BF6774E21FCA92D100FE6BA4 /* SBGrandMasterVC.m in Sources */,
+				BF609BC61F7CED4400C73AB1 /* UILabel+JLLabel.m in Sources */,
+				BFA0593F1FE50A2F006257E7 /* SBGeneralMainViewController.m in Sources */,
+				BF101B421FEEC2940015E3A0 /* BikeClusterItem.m in Sources */,
+				BF2688C31FA1CC780088D522 /* AnimationHelper.m in Sources */,
+				BF04E3271FD163030050B836 /* UIFontDescriptor+JLFontDescriptor.m in Sources */,
+				BF609BE31F7E1F5F00C73AB1 /* NavigationMenuButton.m in Sources */,
 				BF5AE28C1F089E6200ED49E6 /* main.m in Sources */,
-				BFF5246B1F09ED1D00A0E1C6 /* UIView+JLView.m in Sources */,
-				BFF524711F09F3F500A0E1C6 /* UILabel+JLLabel.m in Sources */,
-				BFF524891F0CEBC500A0E1C6 /* MapInfoBtn.m in Sources */,
-				BFF524821F0B21DB00A0E1C6 /* UIColor+JLColor.m in Sources */,
+				BF609BC51F7CED4400C73AB1 /* UIImage+JLImage.m in Sources */,
+				BF61C5391FF7EAD4009AF8BB /* LocationItemCell.m in Sources */,
+				BF2B80A62030048E0080C671 /* SBNotificationCenter.m in Sources */,
+				BF609BD01F7CED4400C73AB1 /* BikeSmarNavigationView.m in Sources */,
+				BF139C381FBFCA32001DDA4D /* JLScrollMileStoneButton.m in Sources */,
+				BF139C061FB7DBED001DDA4D /* Reachability.m in Sources */,
+				BF010633201AB8360067C8FA /* SBBikeTypeCVC.m in Sources */,
+				BF2B04201FF4D7C9002743DA /* BikeStationListCollectionViewCell.m in Sources */,
+				BF139C351FBFC7C9001DDA4D /* JLScrollMileStoneView.m in Sources */,
+				BF139C0A1FB8942A001DDA4D /* LoadingView.m in Sources */,
+				BFB494DC200C606E007F18F8 /* BikeCluster.m in Sources */,
+				BFFC8640202822EB007F5BB1 /* BikeDataSource.m in Sources */,
+				BF2B04211FF4D7C9002743DA /* BikeTypesCollectionViewCell.m in Sources */,
+				BF010636201AB9910067C8FA /* TravelPlannerManager.m in Sources */,
+				BF609BC71F7CED4400C73AB1 /* UIView+JLView.m in Sources */,
+				BF2B80AC203133C40080C671 /* UserDefaults.m in Sources */,
+				BF24936F1FFB6752006F29F6 /* BikePieChart.m in Sources */,
+				BFEFA4E41FC574FD00DB5325 /* Constants.m in Sources */,
+				BF9602AF1FAB16D1003ADC2E /* ImageUtil.m in Sources */,
+				BFE88C481F926A9100D27D52 /* BikeModel.m in Sources */,
+				BF28B1361FA6DB7C00B81082 /* CircularLoadingLabel.m in Sources */,
+				BF1DD05C1F8E6B18009CD654 /* WeatherIconView.m in Sources */,
+				BFE88C531F94A32A00D27D52 /* BikeMarkerIconView.m in Sources */,
+				BF24936C1FFA31D7006F29F6 /* BikeClusterIconView.m in Sources */,
+				BF609BE61F7E1F6F00C73AB1 /* NavigationSearchButton.m in Sources */,
+				BF7E5BB11F919B8400D20D09 /* BikeMarker.m in Sources */,
+				BF609BCF1F7CED4400C73AB1 /* ServerConnector.m in Sources */,
+				BF01063D201ABE8E0067C8FA /* NSMutableArray+JLMutableArray.m in Sources */,
+				BF609BE91F7E1FB500C73AB1 /* NavigationButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +978,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -413,7 +988,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -454,7 +1033,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -462,7 +1043,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
